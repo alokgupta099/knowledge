@@ -1,0 +1,293 @@
+[
+    {
+    "id": "PT31",
+    "crop": "Potato",
+    "category": "production",
+    "title": {
+        "en": "Dehalming for Seed Potato Skin Quality",
+        "ne": "गुणस्तरीय आलु बीउका लागि बोट काट्ने प्रविधि",
+        "hi": "आलूबीज उत्पादन के लिए डंठल कटाई तकनीक",
+        "mai": "आलू बीया उत्पादन लेल डंठल कटाई तकनीक"
+    },
+    "fact": {
+        "en": "Cutting green potato foliage (dehalming) 10-12 days before digging hardens tuber skin. This prevents bruising during harvest, reduces late-season virus transmission by aphids, and improves storage shelf-life in Nepal's mid-hills.",
+        "ne": "आलु खन्नुभन्दा १०-१२ दिन अघि बोटको हरियो भाग काट्दा (डिहाल्मिंग) आलुको बोक्रा बलियो हुन्छ। यसले खन्ने बेलामा चोट लाग्न दिँदैन, लाही कीराबाट सर्न सक्ने भाइरस रोक्छ र भण्डारण क्षमता बढाउँछ।",
+        "hi": "आलूकी खुदाई से १०-१२ दिन पहले पौधों के हरे डंठल काटने से आलूका छिलका मजबूत होता है। इससे खुदाई के समय छिलने से बचाव होता है और भंडारण क्षमता बढ़ती है।",
+        "mai": "आलूक कोड़ाइक १०-१२ दिन पहिले बोटक हरियर डंठल कटला सँ आलूक बोकला मजबूत होइत अछि। एकरा सँ कोड़ाइक समय आलू छिलय सँ बचैत अछि।"
+    },
+    "recommendation": {
+        "en": "Cut and remove potato vines entirely at soil level 12 days before the scheduled harvest.",
+        "ne": "आलु खन्ने योजना बनाएको १२ दिन अघि बोटको हरियो भाग पूरै फेदबाट काटेर हटाउनुहोस्।",
+        "hi": "आलूकी खुदाई की योजना से ठीक १२ दिन पहले पौधों के हरे डंठल को मिट्टी की सतह से काटकर हटा दें।",
+        "mai": "आलूक कोड़ाइक योजना सँ ठीक १२ दिन पहिले बोटक हरियर डंठल कें माटिक सतह सँ काटि कऽ हटा दियौ।"
+    },
+    "keywords": {
+        "en": [
+            "Potato",
+            "Dehalming",
+            "Seed Potato",
+            "Skin Hardening",
+            "Virus Prevention",
+            "Cold Storage"
+        ],
+        "ne": [
+            "आलु",
+            "बोट काट्ने",
+            "बीउ आलु",
+            "बोक्रा बलियो बनाउने",
+            "भाइरस नियन्त्रण",
+            "भण्डारण क्षमता"
+        ],
+        "hi": [
+            "आलू",
+            "डंठल कटाई",
+            "आलू बीज",
+            "छिलका मजबूत करना",
+            "विषाणु नियंत्रण",
+            "शीत गृह"
+        ],
+        "mai": [
+            "आलू",
+            "डंठल कटाई",
+            "बीया आलू",
+            "बोकला",
+            "विषाणु",
+            "भंडारण"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Dehalming"
+        ],
+        "ne": [
+            "डिहाल्मिंग",
+            "आलुको बोट काट्ने"
+        ],
+        "hi": [
+            "डीहलमिंग",
+            "डंठल काटना"
+        ],
+        "mai": [
+            "डंठल कटाई"
+        ]
+    },
+    "source": "Ministry of Agriculture and Livestock Development Nepal"
+},
+{
+    "id": "PT32",
+    "crop": "Potato",
+    "category": "production",
+    "title": {
+        "en": "Optimal Potato Ridge Spacing for High Tuber Yield",
+        "ne": "आलुको उचित दूरी र ड्याङ प्रविधि",
+        "hi": "आलूकी बेहतर उपज के लिए उचित कतार और दूरी",
+        "mai": "आलूक नीक उपज लेल उचित कतार आ दूरी"
+    },
+    "fact": {
+        "en": "Planting seed potatoes too closely limits sunlight and promotes damp fungal environments. Proper line spacing ensures easy earthing-up, balanced soil volume, and optimal ventilation, producing uniform premium tubers.",
+        "ne": "आलु धेरै बाक्लो रोप्दा घाम लाग्न पाउँदैन र ढुसीजन्य रोग लाग्ने वातावरण बन्छ। उचित दूरीमा लहर बनाएर रोप्दा उकेरा दिन सजिलो हुन्छ, हावा राम्रोसँग चल्छ र आलुको आकार राम्रो हुन्छ।",
+        "hi": "आलूको बहुत पास बोने से धूप कम मिलती है और फफूंद फैलने की संभावना बढ़ती है। कतारों में उचित दूरी रखने से मिट्टी चढ़ाना आसान होता है और आलूका आकार अच्छा होता है।",
+        "mai": "आलूकें बेसी घनी रोप्ला सँ रौप कम मिलैत अछि आ फफूंदक प्रकोप बढ़ैत अछि। कतार में उचित दूरी रखला सँ माटि चढ़ायब आसान होइत अछि आ आलूक आकार नीक होइत अछि।"
+    },
+    "recommendation": {
+        "en": "Maintain a line-to-line spacing of 60 cm and a plant-to-plant spacing of 25 cm.",
+        "ne": "लाइन देखि लाइनको दूरी ६० सेन्टिमिटर र बोट देखि बोटको दूरी २५ सेन्टिमिटर कायम राख्नुहोस्।",
+        "hi": "लाइन से लाइन की दूरी ६० सेंटीमीटर और पौधे से पौधे की दूरी २५ सेंटीमीटर रखें।",
+        "mai": "कतार सँ कतारक दूरी ६० सेंटीमीटर आ गाछ सँ गाछक दूरी २५ सेंटीमीटर राखू।"
+    },
+    "keywords": {
+        "en": [
+            "Potato",
+            "Plant Spacing",
+            "Earthing-up",
+            "Soil Volume",
+            "Tuber Uniformity",
+            "Ridge Cultivation"
+        ],
+        "ne": [
+            "आलु",
+            "रोप्ने दूरी",
+            "उकेरा दिने",
+            "माटोको मात्रा",
+            "समान आकार",
+            "ड्याङ बनाउने"
+        ],
+        "hi": [
+            "आलू",
+            "पौधों की दूरी",
+            "मिट्टी चढ़ाना",
+            "मृदा आयतन",
+            "समान आकार",
+            "मेड़ खेती"
+        ],
+        "mai": [
+            "आलू",
+            "गाछक दूरी",
+            "माटि चढ़ायब",
+            "आकार",
+            "मेड़"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Ridge Planting"
+        ],
+        "ne": [
+            "ड्याङमा आलु रोप्ने",
+            "कुलेसो प्रविधि"
+        ],
+        "hi": [
+            "मेड़ पर आलू की बुआई"
+        ],
+        "mai": [
+            "मेड़ पर आलू रोपाई"
+        ]
+    },
+    "source": "FAO Nepal"
+},
+{
+    "id": "PT33",
+    "crop": "Potato",
+    "category": "production",
+    "title": {
+        "en": "Raised Bed Potato Cultivation in Terai",
+        "ne": "तराईमा आलु खेतीका लागि उठेको ड्याङ प्रविधि",
+        "hi": "तराई में आलूके लिए उठी हुई क्यारी तकनीक",
+        "mai": "तराई में आलू लेल उठल क्यारी तकनीक"
+    },
+    "fact": {
+        "en": "Cultivating potatoes on raised beds prevents waterlogging during unpredictable winter showers in Terai. It maintains soil aeration, prevents root rot, and creates loose soil conditions that facilitate uniform tuber expansion and clean harvests.",
+        "ne": "तराईमा हिउँदे वर्षा हुँदा पानी जम्न नदिन आलुलाई उठेको ड्याङमा लगाउनु राम्रो हुन्छ। यसले जरा कुहिन दिँदैन र माटो खुकुलो बनाउने हुँदा आलु राम्रोसँग फस्टाउन पाउँछ।",
+        "hi": "तराई में सर्दियों में वर्षा होने पर जलभराव से बचाने के लिए आलूको उठी हुई क्यारियों पर लगाएं। इससे जड़ें सड़ने से बचती हैं और कंदों का आकार बढ़ता है।",
+        "mai": "तराई में जार में वर्षा भेला पर जलभराव सँ बचेबाक लेल आलूकें उठल क्यारी पर लगाऊ। एकरा सँ जड़ सड़य सँ बचैत अछि।"
+    },
+    "recommendation": {
+        "en": "Construct raised beds 15 cm high and plant seed tubers on top of the beds.",
+        "ne": "१५ सेन्टिमिटर अग्लो उठेको ड्याङ बनाउनुहोस् र बीउ आलुलाई ड्याङको माथिल्लो भागमा रोप्नुहोस्।",
+        "hi": "१५ सेंटीमीटर ऊंची क्यारियां बनाएं और उनके ऊपर आलूके बीज कंदों को रोपें।",
+        "mai": "१५ सेंटीमीटर ऊँच क्यारी बनाऊ आ ओकर ऊपर आलूक बीया कंद कें रोपू।"
+    },
+    "keywords": {
+        "en": [
+            "Potato",
+            "Raised Bed",
+            "Water Drainage",
+            "Tuber Expansion",
+            "Root Aeration",
+            "Terai Agriculture"
+        ],
+        "ne": [
+            "आलु",
+            "उठेको ड्याङ",
+            "पानीको निकास",
+            "आलु फस्टाउने",
+            "जराको हावा",
+            "तराई खेती"
+        ],
+        "hi": [
+            "आलू",
+            "उठी क्यारी",
+            "जल निकास",
+            "कंद का विकास",
+            "जड़ों में हवा",
+            "तराई कृषि"
+        ],
+        "mai": [
+            "आलू",
+            "क्यारी",
+            "जल निकास",
+            "कंदक विकास",
+            "तराई"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Raised Bed Cultivation"
+        ],
+        "ne": [
+            "उठेको ड्याङ प्रविधि",
+            "उठेको ब्याड"
+        ],
+        "hi": [
+            "उठी हुई क्यारी विधि"
+        ],
+        "mai": [
+            "उठल क्यारी विधि"
+        ]
+    },
+    "source": "Nepal Agricultural Research Council (NARC)"
+},
+{
+    "id": "PT34",
+    "crop": "Potato",
+    "category": "production",
+    "title": {
+        "en": "Seed Tuber Sprouting for Early Harvest",
+        "ne": "छिटो आलु फलाउन बीउ टुसाउने प्रविधि",
+        "hi": "शीघ्र आलूउत्पादन के लिए कंद अंकुरण तकनीक",
+        "mai": "जल्दी आलू उत्पादन लेल कंद अंकुरण तकनीक"
+    },
+    "fact": {
+        "en": "Pre-sprouting or chitting seed potatoes before planting ensures rapid, uniform plant emergence. This reduces the risk of soil-borne pathogens attacking weak sprouts and shortens the crop cycle, allowing early winter market entry.",
+        "ne": "रोप्नुअघि बीउ आलुलाई टुसाउन दिँदा (चिटिंग) बोट छिटो र समान रूपमा उम्रन्छ। यसले माटोमुनिका रोगहरूबाट बचाउँछ र आलु छिटो तयार भई हिउँदमै बजारमा बेच्न सकिन्छ।",
+        "hi": "बुआई से पहले आलूके बीजों को अंकुरित (चिटिंग) करने से फसल जल्दी और एक समान उगती है। इससे फसल का समय कम होता है और बाजार में जल्दी उपज बेची जा सकती है।",
+        "mai": "रोपाई सँ पहिले आलूक बीया कें अंकुरित कएला सँ फसल जल्दी आ एक समान उगैत अछि।"
+    },
+    "recommendation": {
+        "en": "Place seed tubers in shallow wooden trays in a well-ventilated, semi-shaded room for 3 weeks before sowing.",
+        "ne": "बीउ आलुलाई रोप्नुभन्दा ३ हप्ता अघि हावा चल्ने र हल्का छहारी भएको कोठामा काठको ट्रेमा फैलाएर राख्नुहोस्।",
+        "hi": "बुआई से ३ सप्ताह पहले बीज कंदों को हवादार, छायादार कमरे में लकड़ी की ट्रे में फैलाकर रखें।",
+        "mai": "रोपाई सँ ३ सप्ताह पहिले बीया कंद कें हवादार, छहारी बला कोठरी में ट्रे में फैला कऽ राखू।"
+    },
+    "keywords": {
+        "en": [
+            "Potato",
+            "Seed Chitting",
+            "Pre-sprouting",
+            "Uniform Emergence",
+            "Early Harvest",
+            "Sprout Vigor"
+        ],
+        "ne": [
+            "आलु",
+            "बीउ टुसाउने",
+            "चिटिंग प्रविधि",
+            "समान उम्रने",
+            "छिटो बाली",
+            "टुसाको शक्ति"
+        ],
+        "hi": [
+            "आलू",
+            "बीज अंकुरण",
+            "चिटिंग",
+            "एक समान फसल",
+            "अगेती खेती",
+            "अंकुर की शक्ति"
+        ],
+        "mai": [
+            "आलू",
+            "बीया अंकुरण",
+            "चिटिंग",
+            "फसल",
+            "जल्दी खेती",
+            "अंकुरण"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Chitting Seed Potatoes"
+        ],
+        "ne": [
+            "आलुको बीउ टुसाउने",
+            "चिटिंग"
+        ],
+        "hi": [
+            "आलू कंद अंकुरण"
+        ],
+        "mai": [
+            "आलू कंदक अंकुरण"
+        ]
+    },
+    "source": "Department of Agriculture Nepal"
+}
+]

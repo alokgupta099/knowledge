@@ -1,0 +1,111 @@
+
+[
+    {
+    "id": "WH28",
+    "crop": "Wheat",
+    "category": "Low Pesticide Recommendations",
+    "title": {
+      "en": "Neem-based Management of Wheat Aphids",
+      "ne": "गहुँको लाही कीरा नियन्त्रणका लागि निमको घोल",
+      "hi": "गेहूं के माहू नियंत्रण के लिए नीम का प्रयोग",
+      "mai": "गेहूंक माहू नियंत्रण लेल नीमक प्रयोग"
+    },
+    "fact": {
+      "en": "Wheat aphids suck sap from young heads, causing yellowing and black mold. Spraying botanical neem oil coats and smothers these insects, controlling populations safely without residual toxicity during grain filling.",
+      "ne": "गहुँको लाही कीराले कलिलो पात र बालाको रस चुसेर बोट पहेँलो बनाउँछ र कालो ढुसी फैलाउँछ। निमको तेल छर्कनाले कीराहरूको श्वासप्रश्वास बन्द भई रासायनिक असर बिना नै लाही कीरा नियन्त्रण हुन्छ।",
+      "hi": "गेहूं के माहू बालियों से रस चूसकर नुकसान पहुंचाते हैं और काली फफूंद फैलाते हैं। नीम के तेल का छिड़काव करने से इन कीटों का नियंत्रण प्राकृतिक रूप से होता है और अनाज सुरक्षित रहता है।",
+      "mai": "गेहूंक माहू बालियों सँ रस चूसिकऽ नुकसान पहुँचाबैत अछि आ कारी फफूंद पसरबैत अछि। नीमक तेलक छिड़काव कएला सँ एहि कीट सभक नियंत्रण प्राकृतिक रूप सँ होइत अछि।"
+    },
+    "recommendation": {
+      "en": "Mix 5 ml of neem oil with 1 ml of liquid soap per liter of water and spray on infested wheat heads.",
+      "ne": "प्रति लिटर पानीमा ५ मिली निमको तेल र १ मिली झोल साबुन मिसाएर लाही लागेको गहुँको बालामा छर्कनुहोस्।",
+      "hi": "प्रति लीटर पानी में ५ मिलीलीटर नीम का तेल और १ मिलीलीटर तरल साबुन मिलाकर प्रभावित बालियों पर छिड़काव करें।",
+      "mai": "प्रति लीटर पाणि में ५ मिलीलीटर नीमक तेल आ १ मिलीलीटर तरल साबुन मिला कऽ प्रभावित बालियों पर छिड़काव करू।"
+    },
+    "keywords": {
+      "en": ["Wheat", "Aphids", "Neem Oil", "Liquid Soap", "Botanical Spray", "Safe Agriculture", "IPM Wheat"],
+      "ne": ["गहुँ", "लाही कीरा", "निमको तेल", "झोल साबुन", "जैविक विषादी", "सुरक्षित कृषि"],
+      "hi": ["गेहूं", "माहू", "नीम तेल", "तरल साबुन", "वानस्पतिक स्प्रे", "सुरक्षित खेती"],
+      "mai": ["गेहूं", "माहू", "नीमक तेल", "तरल साबुन", "जैविक छिड़काव", "सुरक्षित खेती"]
+    },
+    "local_names": {
+      "en": ["Wheat Aphids"],
+      "ne": ["लाही कीरा"],
+      "hi": ["माहू", "चेपा"],
+      "mai": ["माहू"]
+    },
+    "source": "FAO Nepal"
+  },
+  {
+    "id": "WH29",
+    "crop": "Wheat",
+    "category": "Low Pesticide Recommendations",
+    "title": {
+      "en": "Light Trapping for Pink Stem Borer",
+      "ne": "गुलाबी डाँठ प्वाल पार्ने कीरा रोक्न प्रकाश पासो",
+      "hi": "पिंक तना छेदक के लिए प्रकाश प्रपंच विधि",
+      "mai": "पिंक तना छेदक लेल प्रकाश प्रपंच विधि"
+    },
+    "fact": {
+      "en": "Pink stem borer caterpillars bore into wheat stems, causing dead hearts and lodging. The adult moths are highly active at night and attracted to bright lights. Installing simple light traps captures moths, preventing egg laying.",
+      "ne": "गुलाबी डाँठ प्वाल पार्ने कीराले गहुँको डाँठमा प्वाल पारेर बोट सुकाउँछ। यसका वयस्क पुतलीहरू राती बढी सक्रिय हुन्छन् र प्रकाशप्रति आकर्षित हुन्छन्। खेतमा प्रकाश पासो राख्दा पुतलीहरू फस्छन् र फुल पार्न पाउँदैनन्।",
+      "hi": "पिंक तना छेदक गेहूं के तने को सुखा देता है। इसके वयस्क पतंगे रात में सक्रिय होते हैं और प्रकाश की ओर आकर्षित होते हैं। खेत में लाइट ट्रैप लगाने से ये पतंगे नष्ट हो जाते हैं और अंडों का नुकसान बचता है।",
+      "mai": "पिंक तना छेदक गेहूंक तना कें सुखा दैत अछि। एकर पतङ्गा राति में सक्रिय होइत अछि आ प्रकाशक दिस आकर्षित होइत अछि। खेत में लाइट ट्रैप लगौला सँ ई पतङ्गा नष्ट भऽ जाइत अछि।"
+    },
+    "recommendation": {
+      "en": "Install solar or battery-operated light traps at 1-2 traps per ropani in wheat fields.",
+      "ne": "प्रति रोपनी १ देखि २ वटा सौर्य वा ब्याट्रीबाट चल्ने प्रकाश पासोहरू गहुँ खेतमा जडान गर्नुहोस्।",
+      "hi": "प्रति रोपनी १ से २ सोलर या बैटरी से चलने वाले लाइट ट्रैप गेहूं के खेत में स्थापित करें।",
+      "mai": "प्रति रोपनी १ सँ २ सोलर वा बैटरी सँ चलय बला लाइट ट्रैप गेहूंक खेत में लगाऊ।"
+    },
+    "keywords": {
+      "en": ["Wheat", "Pink Stem Borer", "Light Trap", "Night Insects", "Adult Capturing", "Physical Trap", "Ecological Pest"],
+      "ne": ["गहुँ", "गुलाबी डाँठ कीरा", "प्रकाश पासो", "रातको कीरा", "सौर्य पासो", "ब्याट्री पासो"],
+      "hi": ["गेहूं", "पिंक तना छेदक", "प्रकाश प्रपंच", "रात्रि कीट", "सोलर ट्रैप", "बैटरी ट्रैप"],
+      "mai": ["गेहूं", "पिंक तना छेदक", "प्रकाश प्रपंच", "रातिक कीडा", "सोलर ट्रैप", "बैटरी ट्रैप"]
+    },
+    "local_names": {
+      "en": ["Pink Stem Borer"],
+      "ne": ["गुलाबी डाँठ प्वाल पार्ने कीरा"],
+      "hi": ["पिंक तना छेदक"],
+      "mai": ["पिंक तना छेदक"]
+    },
+    "source": "Nepal Agricultural Research Council (NARC)"
+  },
+  {
+    "id": "WH30",
+    "crop": "Wheat",
+    "category": "Low Pesticide Recommendations",
+    "title": {
+      "en": "Manual Weeding for Cutworm Control",
+      "ne": "गहुँको खुम्रे कीराका लागि गोडमेल विधि",
+      "hi": "गेहूं के कटुआ के लिए निराई-गुड़ाई विधि",
+      "mai": "गेहूंक कटुआ लेल कोड़ाई विधि"
+    },
+    "fact": {
+      "en": "Cutworms hide in soil during the day and cut young wheat seedlings at night. Manual hand-weeding and shallow hoeing in the morning exposes the hidden caterpillars under clods to predatory birds, destroying them naturally.",
+      "ne": "खुम्रे (कटुवा) कीरा दिउँसो माटो मुनि लुक्छ र राती गहुँको कलिलो बिरुवा काट्छ। बिहान सबेरै खनजोत वा गोडमेल गर्दा माटोका डल्लामुनि लुकेका कीराहरू बाहिर निस्कन्छन् र चराहरूले खाई दिन्छन्।",
+      "hi": "कटुआ दिन में मिट्टी में छिपते हैं और रात में नए पौधों को काटते हैं। सुबह के समय हल्की गुड़ाई करने से मिट्टी में छिपे कीड़े बाहर आ जाते हैं जिन्हें शिकारी पक्षी खा जाते हैं।",
+      "mai": "कटुआ दिन में माटि में छिपैत अछि आ राति में नव गाछ सब कें काटैत अछछ। भोर में हलुक कोड़ाई कएला सँ माटि में छिपल कीडा सब बाहर आ जाइत अछि।"
+    },
+    "recommendation": {
+      "en": "Perform shallow hoeing and hand weeding during early morning hours to expose cutworms.",
+      "ne": "बिहान सबेरै हल्का गोडमेल गरी माटो चलाउनुहोस् ताकि लुकेका खुम्रे (कटुवा) कीराहरू बाहिर निस्कन सकून्।",
+      "hi": "सुबह के समय हल्की निराई-गुड़ाई करें ताकि छिपे हुए कटुआ कीट बाहर निकल सकें।",
+      "mai": "भोरक समय हलुक कोड़ाई करू जाहि सँ छिपल कटुआ कीट बाहर निकलि सकय।"
+    },
+    "keywords": {
+      "en": ["Wheat", "Cutworms", "Shallow Hoeing", "Cultural Control", "Predatory Birds", "Soil Dislodge", "Manual Weeding"],
+      "ne": ["गहुँ", "खुम्रे कीरा", "गोडमेल विधि", "बिहानी गोडमेल", "चराहरू", "माटो खन्ने"],
+      "hi": ["गेहूं", "कटुआ कीट", "निराई-गुड़ाई", "सुबह की गुड़ाई", "शिकारी पक्षी", "मिट्टी पलटना"],
+      "mai": ["गेहूं", "कटुआ कीट", "निराई कोड़ाई", "भोरक कोड़ाई", "शिकारी चरा", "माटि उलटब"]
+    },
+    "local_names": {
+      "en": ["Cutworms"],
+      "ne": ["खुम्रे कीरा", "कटुवा कीरा"],
+      "hi": ["कटुआ कीट", "कातरा"],
+      "mai": ["कटुआ कीडा"]
+    },
+    "source": "Department of Agriculture Nepal"
+  }
+]

@@ -1,0 +1,111 @@
+[
+    {
+    "id": "PT38",
+    "crop": "Potato",
+    "category": "pesticide",
+    "title": {
+      "en": "Neem Cake for Potato Tuber Moth",
+      "ne": "आलुको पुतली कीरा रोक्न निमको पिना",
+      "hi": "आलू कंद पतंगे के नियंत्रण के लिए नीम की खली",
+      "mai": "आलू कंद पतङ्गाक नियंत्रण लेल नीमक पिना"
+    },
+    "fact": {
+      "en": "Potato Tuber Moth larvae mine into leaves and tunnel inside tubers in soil or storage. Mixing organic neem cake into the soil repels larvae and prevents female moths from laying eggs on exposed tubers.",
+      "ne": "आलुको पुतली कीराका लार्भाले पातमा सुरुङ बनाउँछन् र आलु भित्र प्वाल पार्छन्। माटो तयार गर्दा निमको पिना मिसाउँदा यसको तितोपनाले कीरालाई धपाउँछ र आलु सुरक्षित रहन्छ।",
+      "hi": "आलू कंद पतंगे के कीड़े कंदों में सुरंग बनाकर उन्हें नुकसान पहुंचाते हैं। मिट्टी में नीम की खली मिलाने से कीट दूर भागते हैं और फसल सुरक्षित रहती है।",
+      "mai": "आलू कंद पतङ्गाक कीड़ा कंद में सुरंग बना कऽ ओकरा नुकसान पहुँचाबैत अछि। माटि में नीमक पिना मिलैला सँ कीट दूर भागैत अछि।"
+    },
+    "recommendation": {
+      "en": "Incorporate neem cake at 15 kg per ropani in soil during the final earthing-up stage.",
+      "ne": "अन्तिम पटक आलुमा माटो चढाउने बेलामा प्रति रोपनी १५ केजी निमको पिना माटोमा मिसाउनुहोस्।",
+      "hi": "मिट्टी चढ़ाने के अंतिम चरण में १५ किलोग्राम प्रति रोपनी की दर से नीम की खली मिट्टी में मिलाएं।",
+      "mai": "माटि चढ़बैत काल १५ किलोग्राम प्रति रोपनीक दर सँ नीमक पिना माटि में मिलाऊ।"
+    },
+    "keywords": {
+      "en": ["Potato", "Tuber Moth", "Neem Cake", "Larval Boring", "Earthing-up Support", "Storage Pest"],
+      "ne": ["आलु", "पुतली कीरा", "निमको पिना", "सुरुङ कीरा", "माटो चढाउने", "भण्डारण शत्रु"],
+      "hi": ["आलू", "कंद पतंगा", "नीम की खली", "सुरंग कीट", "मिट्टी चढ़ाना", "भंडारण कीट"],
+      "mai": ["आलू", "कंद पतङ्गा", "नीमक पिना", "सुरंग कीट", "माटि", "भंडारण कीट"]
+    },
+    "local_names": {
+      "en": ["Potato Tuber Moth (PTM)"],
+      "ne": ["आलुको आँख्ला खाने कीरा", "पुतली कीरा"],
+      "hi": ["आलू का कंद पतंगा", "सुरंग कीड़ा"],
+      "mai": ["आलूक कंद पतङ्गा"]
+    },
+    "source": "Department of Agriculture Nepal"
+  },
+  {
+    "id": "PT39",
+    "crop": "Potato",
+    "category": "pesticide",
+    "title": {
+      "en": "Yellow Sticky Traps for Potato Aphid",
+      "ne": "लाही कीरा नियन्त्रणका लागि पहेँलो टाँसिने पासो",
+      "hi": "माहू नियंत्रण के लिए पीले चिपचिपे कार्ड",
+      "mai": "माहू नियंत्रण लेल पीयर लसदार पासो"
+    },
+    "fact": {
+      "en": "Aphids transmit destructive viruses in seed potatoes, ruining crop quality. Installing yellow sticky traps catches adult winged aphids naturally, monitoring pest pressure and protecting plots without pesticide.",
+      "ne": "लाही कीराले आलुमा हानिकारक भाइरस रोग सार्छ, जसले बीउको गुणस्तर बिगार्छ। खेतमा पहेँलो टाँसिने पासो राख्नाले पखेटा भएका लाहीहरू टाँसिन्छन् र बिना विषादी बाली सुरक्षित रहन्छ।",
+      "hi": "माहू आलू की फसल में वायरस फैलाते हैं। खेत में पीले चिपचिपे कार्ड लगाने से उड़ने वाले कीट चिपक कर नष्ट हो जाते हैं और वायरस का प्रसार रुकता है।",
+      "mai": "माहू आलूक फसल में वायरस पसरबैत अछि। खेत में पीयर लसदार पासो लगौला सँ उड़य बला कीड़ा चिपक कऽ नष्ट भऽ जाइत अछि आ वायरसक फैलाव रुकैत अछि।"
+    },
+    "recommendation": {
+      "en": "Place 10-12 yellow sticky traps per ropani at potato canopy height.",
+      "ne": "प्रति रोपनी १० देखि १२ वटा पहेँलो टाँसिने पासोहरू आलुको बोटको उचाई बराबर झुन्ड्याउनुहोस्।",
+      "hi": "प्रति रोपनी १०-१२ पीले चिपचिपे ट्रैप आलू के पौधों की ऊंचाई के स्तर पर लगाएं।",
+      "mai": "प्रति रोपनी १०-१२ गोट पीयर लसदार पासो आलूक गाछक ऊँचाई पर लगाऊ।"
+    },
+    "keywords": {
+      "en": ["Potato", "Aphids", "Yellow Sticky Trap", "Virus Vector", "Organic Monitoring", "Clean Seed"],
+      "ne": ["आलु", "लाही कीरा", "पहेँलो पासो", "भाइरस संवाहक", "जैविक अनुगमन", "स्वस्थ बीउ"],
+      "hi": ["आलू", "माहू", "पीला चिपचिपा जाल", "विषाणु वाहक", "जैविक निगरानी", "स्वच्छ बीज"],
+      "mai": ["आलू", "माहू", "पीयर पासो", "वायरस", "निगरानी", "बीया"]
+    },
+    "local_names": {
+      "en": ["Potato Aphid"],
+      "ne": ["आलुको लाही कीरा", "लाही"],
+      "hi": ["माहू", "चेपा"],
+      "mai": ["माहू"]
+    },
+    "source": "Ministry of Agriculture and Livestock Development Nepal"
+  },
+  {
+    "id": "PT40",
+    "crop": "Potato",
+    "category": "pesticide",
+    "title": {
+      "en": "Metarhizium Soil Treatment for White Grubs",
+      "ne": "खुम्रे कीरा नियन्त्रणका लागि जैविक मित्र ढुसी",
+      "hi": "सफेद ग्रब के नियंत्रण के लिए जैविक कवक विधि",
+      "mai": "सफेद ग्रबक नियंत्रण लेल जैविक कवक विधि"
+    },
+    "fact": {
+      "en": "White grubs feed on potato roots and tubers under the soil, making them unmarketable. Mixing Metarhizium anisopliae in compost targets and destroys these soil grubs biologically, avoiding toxic chemical drenches.",
+      "ne": "खुम्रे कीराले माटोमुनि आलु र जरा खाएर बिगार्छ। कम्पोस्ट मलमा मेटारिजियम एनिजोप्ली नामक जैविक ढुसी मिसाएर हाल्दा कीराहरू नष्ट हुन्छन् र विषादी छर्कनु पर्दैन।",
+      "hi": "सफेद ग्रब मिट्टी के अंदर आलू के कंदों को नुकसान पहुंचाते हैं। गोबर की खाद में मेटारिजियम मित्र फफूंद मिलाने से ये कीट प्राकृतिक रूप से नष्ट हो जाते हैं।",
+      "mai": "सफेद ग्रब मादटक भितर आलूक कंद कें नुकसान पहुँचाबैत अछि। गोबरक खाद में मेटारिजियम मित्र फफूंद मिलैला सँ ई कीट प्राकृतिक रूप सँ नष्ट भऽ जाइत अछि।"
+    },
+    "recommendation": {
+      "en": "Mix 250 grams of Metarhizium anisopliae powder with 100 kg of moist farmyard manure before application.",
+      "ne": "माटोमा हाल्नुअघि १०० केजी ओसिलो कम्पोस्ट मलमा २५० ग्राम मेटारिजियम एनिजोप्लीको धुलो मिसाउनुहोस्।",
+      "hi": "खेत में डालने से पहले १०० किलोग्राम नम गोबर की खाद में २५० ग्राम मेटारिजियम पाउडर मिलाएं।",
+      "mai": "खेत में डालय सँ पहिले १०० किलोग्राम नम गोबरक खाद में २५० ग्राम मेटारिजियम पाउडर मिलाऊ।"
+    },
+    "keywords": {
+      "en": ["Potato", "White Grub", "Metarhizium", "Soil Pathogen", "Biopesticide", "Root Protection"],
+      "ne": ["आलु", "खुम्रे कीरा", "मेटारिजियम", "माटोको शत्रु", "जैविक कवक", "जरा संरक्षण"],
+      "hi": ["आलू", "सफेद ग्रब", "मेटारिजियम", "मृदा रोगजनक", "जैव कीटनाशक", "जड़ सुरक्षा"],
+      "mai": ["आलू", "सफेद ग्रब", "मेटारिजियम", "रोगजनक", "जैविक कीटनाशक", "जड़ सुरक्षा"]
+    },
+    "local_names": {
+      "en": ["White Grub in Potato"],
+      "ne": ["खुम्रे कीरा", "ग्रे गवारो"],
+      "hi": ["सफेद ग्रब", "गोबरैला कीड़ा"],
+      "mai": ["सफेद ग्रब"]
+    },
+    "source": "FAO Nepal"
+  }
+
+]

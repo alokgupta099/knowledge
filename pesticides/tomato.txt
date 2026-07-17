@@ -1,0 +1,218 @@
+[
+    {
+    "id": "TM48",
+    "crop": "Tomato",
+    "category": "pesticide",
+    "title": {
+        "en": "Yellow Sticky Traps for Sucking Insects",
+        "ne": "सेतो झिँगा नियन्त्रणका लागि पहेँलो टाँसिने पासो",
+        "hi": "सफेद मक्खी नियंत्रण के लिए पीले चिपचिपे प्रपंच",
+        "mai": "सफेद माछी नियंत्रण लेल पीयर लसदार पासो"
+    },
+    "fact": {
+        "en": "Whiteflies and leaf miners are attracted to yellow colors. Placing yellow sticky traps inside tomato fields catches adult insects on the sticky surface, reducing pest populations without harmful sprays.",
+        "ne": "सेतो झिँगा र पात खन्ने कीरा पहेँलो रङप्रति आकर्षित हुन्छन्। गोलभेडा बारीमा पहेँलो टाँसिने पासो राख्नाले वयस्क कीराहरू टाँसिन्छन् र विषादी बिना नै कीरा नियन्त्रण हुन्छ।",
+        "hi": "सफेद मक्खी और लीफ माइनर पीले रंग की ओर आकर्षित होते हैं। टमाटर के खेत में पीले चिपचिपे कार्ड लगाने से उड़ने वाले कीट चिपक कर नष्ट हो जाते हैं।",
+        "mai": "सफेद माछी आ लीफ माइनर पीयर रङ्गक प्रति आकर्षित होइत अछि। टमाटरक खेत में पीयर लसदार पासो लगौला सँ उड़य बला कीड़ा चिपक कऽ नष्ट भऽ जाइत अछि।"
+    },
+    "recommendation": {
+        "en": "Hang 10-15 yellow sticky traps per ropani at the canopy level of tomato plants.",
+        "ne": "प्रति रोपनी १० देखि १५ वटा पहेँलो टाँसिने पासोहरू गोलभेडाको बोटको उचाई बराबर झुन्ड्याउनुहोस्।",
+        "hi": "प्रति रोपनी १० से १५ पीले चिपचिपे ट्रैप टमाटर के पौधों की ऊंचाई के स्तर पर लटकाएं।",
+        "mai": "प्रति रोपनी १० सँ १५ गोट पीयर लसदार पासो टमाटरक गाछक ऊँचाई पर लटकाऊ।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Whitefly",
+            "Yellow Sticky Trap",
+            "Physical Control",
+            "Integrated Pest Management",
+            "Tunnel"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "सेतो झिँगा",
+            "पहेँलो पासो",
+            "भौतिक नियन्त्रण",
+            "आईपीएम",
+            "टनेल"
+        ],
+        "hi": [
+            "टमाटर",
+            "सफेद मक्खी",
+            "पीला चिपचिपा ट्रैप",
+            "भौतिक नियंत्रण",
+            "कीट प्रबंधन",
+            "पॉलीहाउस"
+        ],
+        "mai": [
+            "टमाटर",
+            "सफेद माछी",
+            "पीयर पासो",
+            "भौतिक नियंत्रण",
+            "कीट प्रबंधन",
+            "टनल"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Yellow Sticky Cards"
+        ],
+        "ne": [
+            "पहेँलो टाँसिने पासो"
+        ],
+        "hi": [
+            "पीला चिपचिपा प्रपंच"
+        ],
+        "mai": [
+            "पीयर लसदार पासो"
+        ]
+    },
+    "source": "Nepal Agricultural Research Council (NARC)"
+},
+{
+    "id": "TM49",
+    "crop": "Tomato",
+    "category": "pesticide",
+    "title": {
+        "en": "Pheromone Traps for Tomato Fruit Borer",
+        "ne": "फल कुहाउने कीरा रोक्न फेरोमोन पासो",
+        "hi": "टमाटर के फल छेदक के लिए फेरोमोन ट्रैप",
+        "mai": "टमाटरक फल छेदक लेल फेरोमोन ट्रैप"
+    },
+    "fact": {
+        "en": "Tomato fruit borer caterpillars bore into developing fruits, making them unfit for market. Installing Helicoverpa-lure pheromone traps captures adult male moths, disrupting mating and preventing damage naturally without sprays.",
+        "ne": "फल कुहाउने कीराका लार्भाले गोलभेडा भित्र प्वाल पारेर फल नष्ट गर्छन्। हेलिकोभरपा-ल्युर भएको फेरोमोन पासो राख्नाले वयस्क भाले पुतलीहरू समातिन्छन् र बिना विषादी फल जोगिन्छ।",
+        "hi": "फल छेदक कीट टमाटर के फलों में छेद करके उन्हें नष्ट कर देते हैं। हेलीकोवर्पा-ल्यूर युक्त फेरोमोन ट्रैप लगाने से नर पतंगे फंस जाते हैं और रासायनिक कीटनाशकों की बचत होती है।",
+        "mai": "फल छेदक कीट टमाटरक फल में छेद कऽ ओकरा नष्ट कऽ दैत अछि। हेलीकोवर्पा-ल्यूर युक्त फेरोमोन ट्रैप लगौला सँ नर पतङ्गा फँसि जाइत अछि।"
+    },
+    "recommendation": {
+        "en": "Install 5-6 Helicoverpa-lure pheromone traps per ropani at canopy height of tomato crop.",
+        "ne": "प्रति रोपनी ५ देखि ६ वटा हेलिकोभरपा-ल्युर फेरोमोन पासोहरू बोटको उचाई बराबर झुन्ड्याउनुहोस्।",
+        "hi": "प्रति रोपनी ५-६ हेलीकोवर्पा-ल्यूर फेरोमोन ट्रैप टमाटर के पौधों की ऊंचाई पर इसे लगाएं।",
+        "mai": "प्रति रोपनी ५-६ गोट पीयर लसदार पासो टमाटरक गाछक ऊँचाई पर लगाऊ।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Fruit Borer",
+            "Pheromone Trap",
+            "Helicoverpa",
+            "Organic Suppression",
+            "Caterpillar Control"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "फल कुहाउने कीरा",
+            "फेरोमोन पासो",
+            "हेलिकोभरपा",
+            "जैविक दमन",
+            "लार्भा नियन्त्रण"
+        ],
+        "hi": [
+            "टमाटर",
+            "फल छेदक",
+            "फेरोमोन ट्रैप",
+            "हेलीकोवर्पा",
+            "जैविक नियंत्रण",
+            "कीड़ा नियंत्रण"
+        ],
+        "mai": [
+            "टमाटर",
+            "फल छेदक",
+            "फेरोमोन ट्रैप",
+            "हेलीकोवर्पा",
+            "जैविक नियंत्रण",
+            "कीड़ा"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Tomato Fruit Borer Trap"
+        ],
+        "ne": [
+            "फल कुहाउने कीराको फेरोमोन पासो"
+        ],
+        "hi": [
+            "फल छेदक फेरोमोन ट्रैप"
+        ],
+        "mai": [
+            "फल छेदक फेरोमोन ट्रैप"
+        ]
+    },
+    "source": "Department of Agriculture Nepal"
+},
+{
+    "id": "TM50",
+    "crop": "Tomato",
+    "category": "pesticide",
+    "title": {
+        "en": "Soap Spray for Aphids and Spider Mites",
+        "ne": "लाही कीरा नियन्त्रणका लागि साबुनको झोल प्रविधि",
+        "hi": "लाही और मकड़ी कीट के लिए जैविक साबुन स्प्रे",
+        "mai": "लाही आ मकड़ी कीट लेल साबुन स्प्रे"
+    },
+    "fact": {
+        "en": "Aphids and spider mites suck sap from tender tomato leaves, causing yellow stippling and leaf curl. Spraying a dilute organic soap solution dissolves the protective cuticle of soft-bodied insects, killing them through dehydration.",
+        "ne": "लाही र रातो माकुरो कीराले गोलभेडाको कलिलो पातको रस चुसेर बोट पहेँलो बनाउँछन्। साबुनको हल्का घोल छर्कँदा कीराहरूको बाहिरी बोक्रा खिइन्छ र कीराहरू सुकेर मर्छन्।",
+        "hi": "लाही और मकड़ी कीट टमाटर की कोमल पत्तियों से रस चूसते हैं। जैविक साबुन के हल्के घोल का छिड़काव करने से इन कीटों की त्वचा नष्ट हो जाती है और वे सूखकर नष्ट हो जाते हैं।",
+        "mai": "लाही आ मकड़ी कीट टमाटरक पात सँ रस चूसैत अछि। जैविक साबुनक घोलक छिड़काव कएला सँ एहि कीट सभक त्वचा नष्ट भऽ जाइत अछि आ ओ सभ सूखि जाइत अछि।"
+    },
+    "recommendation": {
+        "en": "Mix 10 ml of organic potassium liquid soap in one liter of water and spray on leaf undersides.",
+        "ne": "प्रति लिटर पानीमा १० मिली प्राङ्गारिक झोल साबुन मिसाएर पातको तल्लो भागमा पर्नेगरी छर्कनुहोस्।",
+        "hi": "प्रति लीटर पानी में १० मिलीलीटर जैविक तरल साबुन मिलाकर पत्तियों के नीचे छिड़काव करें।",
+        "mai": "प्रति लीटर पानि में १० मिलीलीटर जैविक तरल साबुन मिला कऽ पात कऽ नीचा छिड़काव करू।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Mites",
+            "Aphids",
+            "Soap Spray",
+            "Organic Insecticide",
+            "Dehydration Control"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "रातो माकुरो",
+            "लाही कीरा",
+            "साबुन पानी स्प्रे",
+            "जैविक कीटनाशक",
+            "सुकाउने विधि"
+        ],
+        "hi": [
+            "टमाटर",
+            "मकड़ी कीट",
+            "माहू",
+            "साबुन स्प्रे",
+            "जैविक कीटनाशक",
+            "निर्जलीकरण नियंत्रण"
+        ],
+        "mai": [
+            "टमाटर",
+            "मकड़ी",
+            "लाही",
+            "साबुन स्प्रे",
+            "जैविक कीटनाशक",
+            "नियंत्रण"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Liquid Soap Spray"
+        ],
+        "ne": [
+            "साबुनको झोल स्प्रे"
+        ],
+        "hi": [
+            "तरल साबुन का घोल"
+        ],
+        "mai": [
+            "साबुनक घोल"
+        ]
+    },
+    "source": "Ministry of Agriculture and Livestock Development Nepal"
+}
+]

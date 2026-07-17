@@ -1,0 +1,291 @@
+[
+    {
+    "id": "TM41",
+    "crop": "Tomato",
+    "category": "production",
+    "title": {
+        "en": "Staking and Pruning for Greenhouse Tomatoes",
+        "ne": "टनेल भित्र गोलभेडा बाँध्ने र छाँटकाँट गर्ने प्रविधि",
+        "hi": "टमाटर की सधाई और छंटाई तकनीक",
+        "mai": "टमाटरक सधाई आ छंटाई तकनीक"
+    },
+    "fact": {
+        "en": "Staking tomato vines and pruning side shoots in plastic tunnels improves sunlight penetration and reduces disease. This technique encourages larger, uniform fruits and increases the yield per unit area in hills.",
+        "ne": "प्लास्टिक टनेल भित्र गोलभेडाको बोटलाई थाँक्रो दिएर बाँध्दा र छेउका हाँगा काट्दा घाम मज्जाले छिर्छ र रोग कम लाग्छ। यसले फल ठूलो बनाउँछ र उत्पादन बढाउँछ।",
+        "hi": "टमाटर के पौधों को सहारा देने और बगल की टहनियों की छंटाई करने से अंदर तक धूप पहुंचती है और रोग कम होते हैं। इससे फलों का आकार बड़ा होता है और पैदावार बढ़ती है।",
+        "mai": "टमाटरक गाछ कें सहारा देबा सँ आ कातक टहनी सभक छंटाई कएला सँ भितर धरि रौप पहुँचैत अछि आ रोग कम होइत अछि। एकरा सँ फलक आकार पैघ होइत अछि।"
+    },
+    "recommendation": {
+        "en": "Pinch off side suckers weekly and tie the main stem to a bamboo stake or vertical string.",
+        "ne": "हप्ताको एक पटक छेउका नयाँ पालुवा हटाउनुहोस् र मुख्य डाँठलाई बाँसको थाँक्रो वा डोरीमा बाँध्नुहोस्।",
+        "hi": "बगल की नई टहनियों को हर हफ्ते हटाएं और मुख्य तने को बांस के सहारे या रस्सी से बांधें।",
+        "mai": "कातक नव टहनी सब कें प्रति सप्ताह हटाऊ आ मुख्य तना कें बाँसक सहारे वा रस्सी सँ बान्हू।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Staking",
+            "Pruning",
+            "Plastic Tunnel",
+            "Hills Planting",
+            "Yield Improvement"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "थाँक्रो दिने",
+            "छाँटकाँट",
+            "प्लास्टिक टनेल",
+            "पहाडी खेती",
+            "उत्पादन वृद्धि"
+        ],
+        "hi": [
+            "टमाटर",
+            "सधाई",
+            "छंटाई",
+            "प्लास्टिक टनल",
+            "पहाड़ी रोपण",
+            "पैदावार वृद्धि"
+        ],
+        "mai": [
+            "टमाटर",
+            "मचान",
+            "कटाई",
+            "प्लास्टिक टनल",
+            "पहाड़ी खेती",
+            "उपज वृद्धि"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Greenhouse Tomato Support"
+        ],
+        "ne": [
+            "गोलभेडाको थाँक्रो र छाँटकाँट"
+        ],
+        "hi": [
+            "टमाटर का मचान"
+        ],
+        "mai": [
+            "टमाटरक मचान"
+        ]
+    },
+    "source": "Nepal Agricultural Research Council (NARC)"
+},
+{
+    "id": "TM42",
+    "crop": "Tomato",
+    "category": "production",
+    "title": {
+        "en": "Plastic Mulching for Moisture Regulation",
+        "ne": "टनेल भित्र गोलभेडा खेतीमा प्लास्टिक छापो प्रविधि",
+        "hi": "टमाटर की खेती में प्लास्टिक मल्चिंग की तकनीक",
+        "mai": "टमाटरक खेती में प्लास्टिक मल्चिंग तकनीक"
+    },
+    "fact": {
+        "en": "Using plastic mulch in tomato tunnels conserves soil moisture and prevents soil splash. This technique suppresses weeds, reduces evaporation, and prevents root rot diseases caused by uneven soil moisture during watering.",
+        "ne": "टनेल भित्र गोलभेडा खेती गर्दा प्लास्टिक छापो हाल्नाले माटोको ओसिलोपना जोगिन्छ। यसले झार उम्रन दिँदैन र पानी हाल्दा माटोको हिलो उछिट्टिएर बोटमा रोग सर्न पाउँदैन।",
+        "hi": "टमाटर के खेत में प्लास्टिक मल्चिंग बिछाने से मिट्टी की नमी सुरक्षित रहती है। यह खरपतवार को उगने से रोकता है और सिंचाई के समय मिट्टी के छींटों से होने वाले रोगों से बचाता है।",
+        "mai": "टमाटरक खेत में प्लास्टिक मल्चिंग बिछबै सँ माटिक नमी सुरक्षित रहैत अछि। ई खरपतवार कें उगय सँ रोकैत अछि आ सिंचाईक समय माटिक छींटा सँ होय बला रोग सँ बचबैत अछि।"
+    },
+    "recommendation": {
+        "en": "Use silver-black plastic mulch sheets of 25-micron thickness on raised tomato beds before transplanting.",
+        "ne": "बेर्ना सार्नु अघि उठेको ड्याङमा २५ माइक्रोनको सिल्भर-ब्ल्याक प्लास्टिक छापो बिछ्याउनुहोस्।",
+        "hi": "पौध रोपने से पहले उठी हुई क्यारियों पर २५-माइक्रोन की सिल्वर-ब्लैक प्लास्टिक मल्च शीट बिछाएं।",
+        "mai": "रोपाई सँ पहिले उठल क्यारी पर २५-माइक्रोनक सिल्वर-ब्लैक प्लास्टिक मल्च शीट बिछाऊ।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Plastic Mulch",
+            "Moisture Conservation",
+            "Weed Suppression",
+            "Tunnel Gardening",
+            "Terai"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "प्लास्टिक छापो",
+            "ओसिलो संरक्षण",
+            "झार नियन्त्रण",
+            "टनेल खेती",
+            "तराई"
+        ],
+        "hi": [
+            "टमाटर",
+            "प्लास्टिक मल्च",
+            "नमी संरक्षण",
+            "खरपतवार नियंत्रण",
+            "टैपिंग",
+            "तराई"
+        ],
+        "mai": [
+            "टमाटर",
+            "प्लास्टिक मल्च",
+            "नमी संरक्षण",
+            "खरपतवार",
+            "टनल",
+            "तराई"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Plastic Mulching"
+        ],
+        "ne": [
+            "प्लास्टिक मल्चिंग",
+            "छापो प्रविधि"
+        ],
+        "hi": [
+            "प्लास्टिक मल्चिंग"
+        ],
+        "mai": [
+            "प्लास्टिक मल्चिंग"
+        ]
+    },
+    "source": "Department of Agriculture Nepal"
+},
+{
+    "id": "TM43",
+    "crop": "Tomato",
+    "category": "production",
+    "title": {
+        "en": "Micro-Nutrient Spraying for Fruit Quality",
+        "ne": "गोलभेडामा सुक्ष्म पोषक तत्व हाल्ने प्रविधि",
+        "hi": "टमाटर में सूक्ष्म पोषक तत्वों का छिड़काव",
+        "mai": "टमाटर में सूक्ष्म पोषक तत्वक छिड़काव"
+    },
+    "fact": {
+        "en": "Calcium and boron deficiencies in tomatoes cause blossom-end rot (black leathery spots) and fruit splitting. Foliar application of micro-nutrients improves calcium transport and reinforces the skin, ensuring crack-free yields.",
+        "ne": "क्याल्सियम र बोरोनको कमीले गोलभेडाको फेद कुहिने र फल फुट्ने समस्या आउँछ। सुक्ष्म पोषक तत्व छर्कनाले बोटले पोषक तत्व पाउँछ र फल फुट्न पाउँदैन।",
+        "hi": "कैल्शियम और बोरॉन की कमी से टमाटर का निचला हिस्सा सड़ने लगता है और फल फटने लगते हैं। सूक्ष्म पोषक तत्वों का छिड़काव करने से फल स्वस्थ बनते हैं और फटने से बचते हैं।",
+        "mai": "कैल्शियम आ बोरॉनक कमी सँ टमाटरक निचुलका हिस्सा सड़य लगैत अछि आ फल फटय लगैत अछि। सूक्ष्म पोषक तत्वक छिड़काव कएला सँ फल स्वस्थ बनैत अछि।"
+    },
+    "recommendation": {
+        "en": "Spray calcium chloride solution (0.5%) combined with borax (0.1%) during the early fruit-setting stage.",
+        "ne": "फल लाग्न सुरु हुने अवस्थामा ०.५ प्रतिशत क्याल्सियम क्लोराइड र ०.१ प्रतिशत बोराक्सको घोल मिसाएर बोटमा छर्कनुहोस्।",
+        "hi": "फल आते समय ०.५ प्रतिशत कैल्शियम क्लोराइड और ०.१ प्रतिशत बोरेक्स के घोल का छिड़काव करें।",
+        "mai": "फल अइबाक समय ०.५ प्रतिशत कैल्शियम क्लोराइड आ ०.१ प्रतिशत बोरेक्सक घोलक छिड़काव करू।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Blossom End Rot",
+            "Fruit Splitting",
+            "Calcium Chloride",
+            "Micro-nutrients",
+            "Foliar Nutrition"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "फेद कुहिने",
+            "फल फुट्ने",
+            "क्याल्सियम क्लोराइड",
+            "सुक्ष्म पोषक तत्व",
+            "पर्ण पोषण"
+        ],
+        "hi": [
+            "टमाटर",
+            "निचला सड़न",
+            "फल फटना",
+            "कैल्शियम क्लोराइड",
+            "सूक्ष्म पोषक तत्व",
+            "पर्णीय छिड़काव"
+        ],
+        "mai": [
+            "टमाटर",
+            "जड़ सड़न",
+            "फल फटब",
+            "कैल्शियम",
+            "पोषक तत्व",
+            "छिड़काव"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Micro-Nutrient Treatment"
+        ],
+        "ne": [
+            "सूक्ष्म पोषक तत्व उपचार"
+        ],
+        "hi": [
+            "सूक्ष्म पोषक छिड़काव"
+        ],
+        "mai": [
+            "सूक्ष्म पोषक छिड़काव"
+        ]
+    },
+    "source": "Ministry of Agriculture and Livestock Development Nepal"
+},
+{
+    "id": "TM44",
+    "crop": "Tomato",
+    "category": "production",
+    "title": {
+        "en": "Organic Drip Irrigation for Greenhouse Tomatoes",
+        "ne": "टनेल भित्र गोलभेडाका लागि थोपा सिँचाइ प्रविधि",
+        "hi": "प्लास्टिक टनल में टमाटर के लिए टपक सिंचाई तकनीक",
+        "mai": "प्लास्टिक टनल में टमाटर लेल टपक सिंचाई तकनीक"
+    },
+    "fact": {
+        "en": "Over-watering tomatoes in plastic tunnels raises humidity, triggering fungal blights. Drip irrigation delivers precise water directly to the root zone, maintaining dry leaves and saving water resources in dry hilly terraces.",
+        "ne": "टनेल भित्र धेरै पानी हाल्दा ओसिलोपना बढेर डढुवा रोग लाग्छ। थोपा सिँचाइले जरामा मात्र आवश्यक पानी पुर्‍याउने हुँदा पात सुख्खा रहन्छ र रोग लाग्ने सम्भावना कम हुन्छ।",
+        "hi": "प्लास्टिक टनल में अत्यधिक पानी देने से नमी बढ़ती है और झुलसा रोग फैलता है। टपक (ड्रिप) सिंचाई सीधे जड़ों में पानी पहुंचाती है जिससे पत्तियां सूखी रहती हैं और रोग नहीं फैलता।",
+        "mai": "प्लास्टिक टनल में बेसी पानि देला सँ नमी बढ़ैत अछि आ झुलसा रोग पसरैत अछि। टपक (ड्रिप) सिंचाई सीधे जड़ों में पानि पहुँचाबैत अछि।"
+    },
+    "recommendation": {
+        "en": "Install a drip irrigation system with emitters spaced 30 cm apart directly under the plastic mulch.",
+        "ne": "प्लास्टिक छापो मुनि ३0 सेन्टिमिटरको दूरीमा थोपा सिँचाइको पाइप जडान गर्नुहोस्।",
+        "hi": "प्लास्टिक मल्च के नीचे ३० सेंटीमीटर की दूरी पर ड्रिप सिंचाई प्रणाली स्थापित करें।",
+        "mai": "प्लास्टिक मल्चक नीचा ३० सेंटीमीटरक दूरी पर ड्रिप सिंचाई प्रणाली स्थापित करू।"
+    },
+    "keywords": {
+        "en": [
+            "Tomato",
+            "Drip Irrigation",
+            "Water Efficiency",
+            "Tunnel Humidity",
+            "Water Management",
+            "Blight Prevention"
+        ],
+        "ne": [
+            "गोलभेडा",
+            "थोपा सिँचाइ",
+            "पानीको उपयोग",
+            "टनेल ओसिलोपना",
+            "जल व्यवस्थापन",
+            "डढुवा रोकथाम"
+        ],
+        "hi": [
+            "टमाटर",
+            "टपक सिंचाई",
+            "जल दक्षता",
+            "टनल की नमी",
+            "जल प्रबंधन",
+            "झुलसा नियंत्रण"
+        ],
+        "mai": [
+            "टमाटर",
+            "ड्रिप सिंचाई",
+            "पानीक बचत",
+            "नमी",
+            "जल प्रबंधन",
+            "बचाव"
+        ]
+    },
+    "local_names": {
+        "en": [
+            "Drip Irrigation for Greenhouse"
+        ],
+        "ne": [
+            "थोपा सिँचाइ प्रविधि"
+        ],
+        "hi": [
+            "टपक सिंचाई प्रणाली"
+        ],
+        "mai": [
+            "टपक सिंचाई"
+        ]
+    },
+    "source": "FAO Nepal"
+}
+]

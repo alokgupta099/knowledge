@@ -1,0 +1,110 @@
+[
+    {
+    "id": "PT35",
+    "crop": "Potato",
+    "category": "disease",
+    "title": {
+      "en": "Late Blight Detection and Management in Potato",
+      "ne": "आलुको डढुवा रोग पहिचान र व्यवस्थापन",
+      "hi": "आलू के पछेती झुलसा रोग की पहचान और प्रबंधन",
+      "mai": "आलूक पछेती झुलसा रोगक पहचान आ प्रबंधन"
+    },
+    "fact": {
+      "en": "Late Blight, caused by Phytophthora infestans, produces dark, water-soaked leaf lesions with white velvety growth underneath during cloudy, humid periods. It quickly rots potato foliage and tubers in high hill regions.",
+      "ne": "आलुको डढुवा रोगले बादल लागेको र ओसिलो मौसममा पातहरूमा कालो पानी जस्तो दाग र पातको तल्लो भागमा सेतो मखमली ढुसी बनाउँछ। यसले पहाडी भेगमा बोट र आलुलाई छिट्टै सडाउन सक्छ।",
+      "hi": "पछेती झुलसा रोग आर्द्र और बादलों वाले मौसम में पत्तियों पर काले जलीय धब्बे और निचली सतह पर सफेद मखमली फफूंद बनाता है। यह पहाड़ी क्षेत्रों में आलू की पत्तियों और कंदों को तेजी से सड़ाता है।",
+      "mai": "पछेती झुलसा रोग आर्द्र आ बादर बला मौसम में पात पर कत्थई जलीय धब्बा आ निचुलका भाग में उज्जर मखमली फफूंद बनाबैत अछि। ई पहाड़ी क्षेत्र में आलूक कंद कें तेजी सँ सड़ा दैत अछि।"
+    },
+    "recommendation": {
+      "en": "Spray Trichoderma viride-based organic formulation at 5 grams per liter of water before prolonged rains.",
+      "ne": "लामो समयसम्म झरी पर्नु अघि प्रति लिटर पानीमा ५ ग्राम ट्राइकोडर्मा भिरिडी जैविक कवकनाशक मिसाएर छर्कनुहोस्।",
+      "hi": "लगातार बारिश शुरू होने से पहले प्रति लीटर पानी में ५ ग्राम ट्राइकोडर्मा विरिडी आधारित जैविक कवकनाशी का छिड़काव करें।",
+      "mai": "लगातार वर्षा सुरु होय सँ पहिले प्रति लीटर पानि में ५ ग्राम ट्राइकोडर्मा विरिडी आधारित जैविक कवकनाशीक छिड़काव करू।"
+    },
+    "keywords": {
+      "en": ["Potato", "Late Blight", "Phytophthora", "Trichoderma viride", "Wet Climate", "Tuber Rot"],
+      "ne": ["आलु", "डढुवा रोग", "लेट ब्लाइट", "ट्राइकोडर्मा", "झरी मौसम", "कन्द सडन"],
+      "hi": ["आलू", "पछेती झुलसा", "फाइटोफ्थोरा", "ट्राइकोडर्मा", "नम मौसम", "कंद सड़न"],
+      "mai": ["आलू", "पछेती झुलसा", "फाइटोफ्थोरा", "ट्राइकोडर्मा", "वर्षा मौसम", "कंद सड़न"]
+    },
+    "local_names": {
+      "en": ["Potato Late Blight"],
+      "ne": ["डढुवा रोग", "कालो पोके"],
+      "hi": ["पछेती झुलसा", "काली बीमारी"],
+      "mai": ["झुलसा रोग"]
+    },
+    "source": "Ministry of Agriculture and Livestock Development Nepal"
+  },
+   {
+    "id": "PT36",
+    "crop": "Potato",
+    "category": "disease",
+    "title": {
+      "en": "Identifying Early Blight in Potatoes",
+      "ne": "आलुको पहिलो डढुवा रोग पहिचान",
+      "hi": "आलू के अगेती झुलसा रोग की पहचान",
+      "mai": "आलूक अगेती झुलसा रोगक पहचान"
+    },
+    "fact": {
+      "en": "Early Blight, caused by Alternaria solani, displays concentric black circles (target board pattern) on older potato leaves. Wet foliage and high temperatures speed up the disease, causing leaf dry-out and yield decline.",
+      "ne": "अर्ली ब्लाइट रोगले आलुको पुराना पातहरूमा चक्राकार (निशाना छाप जस्तो) खैरो-कालो गोलो दागहरू बनाउँछ। पात भिजेको बेला र बढी तापमानमा यो रोग छिटो फैलिन्छ, जसले गर्दा पात सुक्छ र उत्पादन घट्छ।",
+      "hi": "अगेती झुलसा रोग पुरानी पत्तियों पर चक्राकार काले धब्बे बनाता है। अधिक तापमान और नमी में यह फफूंद जनित रोग तेजी से फैलता है जिससे पत्तियां सूख जाती हैं।",
+      "mai": "अगेती झुलसा रोग पुरानी पात सब पर चक्राकार करिया धब्बा बनाबैत अछि। बेसी तापमान आ नमी में ई फफूंद जनित रोग तेजी सँ पसरैत अछि।"
+    },
+    "recommendation": {
+      "en": "Apply preventive foliage spray of 1% Bordeaux mixture when concentric spots are observed.",
+      "ne": "पातहरूमा चक्राकार दागहरू देखिनासाथ १ प्रतिशतको बोर्डो मिश्रण तयार गरी पातमा छर्कनुहोस्।",
+      "hi": "पत्तियों पर चक्राकार धब्बे दिखाई देने पर १ प्रतिशत बोर्डो मिश्रण का छिड़काव करें।",
+      "mai": "पात सब पर चक्राकार धब्बा देखाय पर १ प्रतिशत बोर्डो मिश्रणक छिड़काव करू।"
+    },
+    "keywords": {
+      "en": ["Potato", "Early Blight", "Alternaria solani", "Target Board", "Foliage Wetness", "Bordeaux Mixture"],
+      "ne": ["आलु", "अर्ली ब्लाइट", "निशाना छाप दाग", "तापमान", "बोर्डो मिश्रण", "रोग नियन्त्रण"],
+      "hi": ["आलू", "अगेती झुलसा", "अल्टरनेरिया", "नमी", "बोर्डो मिश्रण", "बचाव"],
+      "mai": ["आलू", "अगेती झुलसा", "अल्टरनेरिया", "नमी", "बोर्डो मिश्रण", "बचाव"]
+    },
+    "local_names": {
+      "en": ["Potato Early Blight"],
+      "ne": ["पहिलो डढुवा", "अर्ली ब्लाइट"],
+      "hi": ["अगेती झुलसा"],
+      "mai": ["अगेती झुलसा"]
+    },
+    "source": "FAO Nepal"
+  },
+  {
+    "id": "PT37",
+    "crop": "Potato",
+    "category": "disease",
+    "title": {
+      "en": "Detecting Potato Black Scurf early",
+      "ne": "आलुको कालो कत्ला रोग पहिचान",
+      "hi": "आलू के ब्लैक स्कर्फ रोग की पहचान",
+      "mai": "आलूक ब्लैक स्कर्फ रोगक पहचान"
+    },
+    "fact": {
+      "en": "Black Scurf, caused by Rhizoctonia solani, causes black raised structures resembling hard dirt on potato tuber skins. This fungal pathogen stunts sprouts in early spring, leading to uneven emergence and rough tuber texture.",
+      "ne": "कालो कत्ला रोगले आलुको बोक्रामा नउख्रिने खस्रो कालो दागहरू बनाउँछ। यो ढुसीले सुरुको मौसममा आलुको टुसा बढ्न दिँदैन र आलुको आकार बिगार्छ।",
+      "hi": "ब्लैक स्कर्फ रोग के कारण आलू के छिलके पर काले रंग की पपड़ी जैसी संरचनाएं बन जाती हैं। यह फफूंद शुरुआती मौसम में कंदों के अंकुरण को रोकती है और आलू की बनावट खराब करती है।",
+      "mai": "ब्लैक स्कर्फ रोगक कारण आलूक बोकला पर करिया रङ्गक पपड़ी सन संरचना बनि जाइत अछि। ई फफूंद आलूक बनावट खराब करैत अछि।"
+    },
+    "recommendation": {
+      "en": "Wash and treat seed tubers with Trichoderma viride suspension before planting.",
+      "ne": "रोप्नुअघि बीउ आलुलाई धोएर ट्राइकोडर्मा भिरिडीको झोलमा मिसाएर उपचार गर्नुहोस्।",
+      "hi": "बुआई से पहले आलू के बीजों को धोकर ब्युवेरिया या ट्राइकोडर्मा विरिडी के घोल से उपचारित करें।",
+      "mai": "रोपाई सँ पहिले आलूक बीया कें धो कऽ ट्राइकोडर्मा विरिडीक घोल सँ उपचारित करू।"
+    },
+    "keywords": {
+      "en": ["Potato", "Black Scurf", "Rhizoctonia", "Tuber Surface", "Fungal Pathogen", "Seed Infection"],
+      "ne": ["आलु", "कालो कत्ला", "बोक्राको रोग", "हाइब्रिड बीउ", "ट्राइकोडर्मा उपचार", "आलुको आकार"],
+      "hi": ["आलू", "ब्लैक स्कर्फ", "राइजोक्टोनिया", "पपड़ी रोग", "बीजोपचार", "कंद की बनावट"],
+      "mai": ["आलू", "ब्लैक स्कर्फ", "राइजोक्टोनिया", "पपड़ी रोग", "बीया उपचार", "कंदक बनावट"]
+    },
+    "local_names": {
+      "en": ["Black Scurf"],
+      "ne": ["कालो कत्ला रोग", "चेचक रोग"],
+      "hi": ["ब्लैक स्कर्फ", "आलू का चेचक रोग"],
+      "mai": ["ब्लैक स्कर्फ"]
+    },
+    "source": "Nepal Agricultural Research Council (NARC)"
+  }
+]
