@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>कृषि साथी | Krishi Sathi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --field-green:#2F5233;
+    --field-green-dark:#1C3620;
+    --field-green-light:#4C7C51;
+    --wheat:#E8A33D;
+    --wheat-dark:#C9822A;
+    --sky:#3E8FA8;
+    --sky-dark:#2C6B7D;
+    --brick:#C1592C;
+    --brick-dark:#973F1D;
+    --cream:#FBF6EC;
+    --cream-dim:#F1E9D8;
+    --ink:#20291C;
+    --ink-soft:#4A5240;
+    --radius-lg:30px;
+    --radius-md:20px;
+    --shadow:0 10px 30px rgba(28,54,32,0.18);
+    --lang-ne:#A8291F;
+    --lang-ne-dark:#6E1912;
+    --lang-mai:#255E28;
+    --lang-mai-dark:#153A17;
+    --lang-hi:#FFFFFF;
+    --lang-hi-dark:#B8A87D;
+    --lang-hi-text:#2F5233;
+    --lang-en:#B8860B;
+    --lang-en-dark:#7A5A08;
+    --lang-en-text:#2E2200;
+    --sun-gold:#F2B23E;
+    --sun-gold-dark:#D68F1E;
+    --field-mid:#3D6B42;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse 60% 40% at 15% 0%, rgba(242,178,62,0.16), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 100% 15%, rgba(63,145,66,0.12), transparent 60%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-dim) 100%);
+    color:var(--ink);
+    font-family:'Mukta',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Baloo 2',sans-serif;}
+  button{font-family:inherit;cursor:pointer;border:none;-webkit-tap-highlight-color:transparent;}
+  ::selection{background:var(--wheat);color:var(--ink);}
+  :focus-visible{outline:3px solid var(--wheat);outline-offset:2px;}
+
+  /* ---------- Top bar: language selector ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:var(--field-green-dark);
+    padding:12px 10px;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    box-shadow:0 4px 16px rgba(0,0,0,0.2);
+  }
+  .lang-btn{
+    background:rgba(255,255,255,0.09);
+    color:#fff;
+    border-radius:999px;
+    padding:13px 16px;
+    font-size:16px;
+    font-weight:700;
+    min-height:50px;
+    display:flex; align-items:center; justify-content:center; gap:6px;
+    transition:transform .15s ease, background .2s ease;
+    border:2.5px solid transparent;
+    flex:1;
+    max-width:150px;
+  }
+  .lang-btn[data-lang="ne"]{border-color:var(--lang-ne); background:rgba(168,41,31,0.22);}
+  .lang-btn[data-lang="mai"]{border-color:var(--lang-mai); background:rgba(37,94,40,0.22);}
+  .lang-btn[data-lang="hi"]{border-color:var(--lang-hi-dark); background:rgba(255,255,255,0.18);}
+  .lang-btn[data-lang="en"]{border-color:var(--lang-en); background:rgba(184,134,11,0.22);}
+  .lang-btn[data-lang="ne"].active{background:var(--lang-ne); color:#fff; border-color:#fff;}
+  .lang-btn[data-lang="mai"].active{background:var(--lang-mai); color:#fff; border-color:#fff;}
+  .lang-btn[data-lang="hi"].active{background:var(--lang-hi); color:var(--lang-hi-text); border-color:var(--lang-hi-dark);}
+  .lang-btn[data-lang="en"].active{background:var(--lang-en); color:#fff; border-color:#fff;}
+  .lang-btn.active{
+    transform:scale(1.06);
+  }
+  .lang-btn:active{transform:scale(0.95);}
+  .lang-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;}
+  .lang-btn[data-lang="ne"] .lang-dot{background:var(--lang-ne);}
+  .lang-btn[data-lang="mai"] .lang-dot{background:var(--lang-mai);}
+  .lang-btn[data-lang="hi"] .lang-dot{background:var(--lang-hi); border:1.5px solid var(--lang-hi-dark);}
+  .lang-btn[data-lang="en"] .lang-dot{background:var(--lang-en);}
+  .lang-btn.active .lang-dot{background:rgba(0,0,0,0.25);}
+  .lang-btn[data-lang="hi"].active .lang-dot{background:var(--lang-hi-text);}
+  .mute-btn{
+    background:rgba(255,255,255,0.09);
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;
+  }
+  .mute-btn svg{width:20px;height:20px;}
+  .mute-btn.muted{background:var(--brick);}
+  .lang-accent-bar{height:6px;width:100%;background:var(--lang-en);transition:background .3s ease;}
+  .help-btn{
+    background:rgba(255,255,255,0.09);
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;
+    font-weight:800;font-size:18px;font-family:'Baloo 2',sans-serif;
+  }
+  .help-btn:active{transform:scale(0.92);}
+
+  /* ---------- How-to-use guide (3 steps, order matters) ---------- */
+  .howto{
+    max-width:640px;margin:0 auto; padding:18px 16px 4px;
+    display:flex; align-items:flex-start; justify-content:center; gap:2px;
+  }
+  .howto-step{display:flex;flex-direction:column;align-items:center;flex:1;text-align:center;position:relative;}
+  .howto-circle{
+    width:58px;height:58px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 14px rgba(28,54,32,0.14);
+    position:relative;margin-bottom:8px;
+  }
+  .howto-circle svg{width:28px;height:28px;}
+  .howto-num{
+    position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;
+    background:var(--field-green-dark);color:#fff;font-size:12px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;border:2px solid var(--cream);
+  }
+  .howto-label{font-size:12.5px;font-weight:700;color:var(--ink-soft);line-height:1.3;max-width:88px;}
+  .howto-arrow{align-self:center;margin-top:20px;color:#C9BE9E;flex-shrink:0;}
+  .howto-arrow svg{width:20px;height:20px;}
+
+  /* ---------- Tap hint (animated pointer on hero call button) ---------- */
+  .tap-hint{
+    position:absolute; width:34px; height:34px; z-index:5;
+    pointer-events:none;
+    animation:taphint 1.4s ease-in-out infinite;
+    filter:drop-shadow(0 3px 6px rgba(0,0,0,0.35));
+  }
+  @keyframes taphint{
+    0%{transform:translate(0,0) scale(1);opacity:0.95;}
+    40%{transform:translate(-6px,6px) scale(0.9);opacity:0.7;}
+    70%{transform:translate(0,0) scale(1);opacity:0.95;}
+    100%{transform:translate(0,0) scale(1);opacity:0.95;}
+  }
+  .tap-hint.hidden{display:none;}
+
+  /* ---------- Splash / voice-first entry screen ---------- */
+  .splash{
+    position:fixed; inset:0; z-index:300;
+    background:radial-gradient(circle at 50% 20%, rgba(232,163,61,0.16), transparent 50%),
+      linear-gradient(180deg, var(--field-green) 0%, var(--field-green-dark) 100%);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:26px 20px; text-align:center; color:var(--cream);
+    transition:opacity .4s ease, visibility .4s ease;
+  }
+  .splash.hide{opacity:0; visibility:hidden; pointer-events:none;}
+  .splash-brand{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+  .splash-brand svg{width:32px;height:32px;}
+  .splash-brand span{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:26px;}
+  .splash-sub{font-size:14px;opacity:0.85;margin-bottom:30px;max-width:260px;}
+  .splash-orb-wrap{position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:34px;}
+  .splash-ring{position:absolute;inset:0;border-radius:50%;border:3px solid var(--wheat);animation:pulse 2s ease-out infinite;}
+  .splash-ring.d2{animation-delay:0.7s;}
+  .splash-ring.d3{animation-delay:1.4s;}
+  .splash-orb{
+    position:relative; width:150px;height:150px;border-radius:50%;
+    background:linear-gradient(150deg,var(--wheat),var(--wheat-dark));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+  }
+  .splash-orb svg{width:64px;height:64px;color:var(--field-green-dark);}
+  .splash-langs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:360px;}
+  .splash-lang{
+    border-radius:22px; padding:16px 20px; min-width:96px;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    font-weight:800; font-size:17px;
+    border:3px solid transparent;
+    transition:transform .15s ease, background .2s ease;
+  }
+  .splash-lang svg{width:22px;height:22px;}
+  #splash-ne{background:rgba(168,41,31,0.9); color:#fff; border-color:var(--lang-ne-dark);}
+  #splash-mai{background:rgba(37,94,40,0.9); color:#fff; border-color:var(--lang-mai-dark);}
+  #splash-hi{background:rgba(255,255,255,0.95); color:var(--lang-hi-text); border-color:var(--lang-hi-dark);}
+  #splash-en{background:rgba(184,134,11,0.9); color:#fff; border-color:var(--lang-en-dark);}
+  #splash-ne.speaking{background:var(--lang-ne); border-color:#fff; transform:scale(1.1);}
+  #splash-mai.speaking{background:var(--lang-mai); border-color:#fff; transform:scale(1.1);}
+  #splash-hi.speaking{background:var(--lang-hi); border-color:var(--sun-gold-dark); transform:scale(1.1); box-shadow:0 0 0 3px rgba(255,255,255,0.5);}
+  #splash-en.speaking{background:var(--lang-en); border-color:#fff; transform:scale(1.1);}
+  .splash-lang:active{transform:scale(0.94);}
+  .splash-hint{margin-top:26px;font-size:13px;opacity:0.75;max-width:260px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:30px 18px 34px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(242,178,62,0.32), transparent 48%),
+      radial-gradient(circle at 100% 30%, rgba(242,178,62,0.14), transparent 55%),
+      linear-gradient(180deg, var(--field-green) 0%, var(--field-green-dark) 100%);
+    color:var(--cream);
+    overflow:hidden;
+  }
+  .hero-illustration{
+    width:100%; max-width:340px; height:auto; margin:2px auto 14px; display:block;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:-2px; height:50px;
+    background:var(--cream);
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    transform:scaleX(1.4);
+  }
+  .brandrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:2px;}
+  .brandrow svg{width:36px;height:36px;flex-shrink:0;}
+  .app-name{font-size:clamp(26px,7vw,34px);font-weight:800;margin:0;letter-spacing:0.3px;}
+  .tagline{font-size:clamp(14px,4vw,17px);opacity:0.92;margin:6px 0 22px;font-weight:500;}
+
+  .call-cta-wrap{position:relative;display:inline-flex;flex-direction:column;align-items:center;z-index:2;}
+  .pulse-ring{position:absolute; inset:0; border-radius:50%; border:3px solid var(--wheat); animation:pulse 2.2s ease-out infinite;}
+  .pulse-ring.delay{animation-delay:1.1s;}
+  @keyframes pulse{0%{transform:scale(0.9);opacity:0.9;}100%{transform:scale(1.95);opacity:0;}}
+  .call-cta{
+    position:relative;
+    width:150px;height:150px;border-radius:50%;
+    background:linear-gradient(150deg,var(--wheat),var(--wheat-dark));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 16px 34px rgba(0,0,0,0.34);
+    transition:transform .15s ease;
+  }
+  .call-cta:active{transform:scale(0.94);}
+  .call-cta svg{width:66px;height:66px;}
+  .call-cta-label{margin-top:16px;font-weight:800;font-size:21px;}
+  .call-cta-sub{font-size:14px;opacity:0.9;margin-top:4px;max-width:260px;}
+
+  .listen-chip{
+    margin-top:18px;
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.14);
+    padding:13px 22px;border-radius:999px;
+    font-size:16px;font-weight:700;color:var(--cream);
+    border:2px solid rgba(255,255,255,0.4);
+    min-height:52px;
+  }
+  .listen-chip svg{width:20px;height:20px;}
+  .listen-chip:active{transform:scale(0.96);}
+
+  /* ---------- Feature grid ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    padding:6px 16px 24px;
+    max-width:640px;margin:0 auto;
+  }
+  .card{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    padding:20px 12px 16px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    position:relative;
+    border:3px solid transparent;
+    transition:transform .15s ease;
+    min-height:222px;
+  }
+  .card:active{transform:scale(0.96);}
+  .card.c-disease{border-color:#DCE9DA;}
+  .card.c-weather{border-color:#D8E9EE;}
+  .card.c-pest{border-color:#F3E3D2;}
+  .card.c-call{border-color:#F3DCCF;}
+  .icon-badge{
+    width:92px;height:92px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:10px;
+  }
+  .icon-badge svg{width:50px;height:50px;}
+  .c-disease .icon-badge{background:#E9F3E8;color:var(--field-green);}
+  .c-weather .icon-badge{background:#E4F1F5;color:var(--sky);}
+  .c-pest .icon-badge{background:#FBEEDD;color:var(--wheat-dark);}
+  .c-call .icon-badge{background:#FBE7DA;color:var(--brick);}
+  .card-title{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:19px;margin:0 0 12px;line-height:1.2;}
+  .listen-pill{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    background:var(--cream-dim);color:var(--ink-soft);
+    border-radius:999px;padding:9px 14px;font-size:13.5px;font-weight:700;
+    min-height:38px;
+  }
+  .listen-pill svg{width:15px;height:15px;}
+  .listen-pill:active{background:var(--wheat);color:#fff;}
+  .c-disease .listen-pill:active{background:var(--field-green);}
+  .c-weather .listen-pill:active{background:var(--sky);}
+  .c-pest .listen-pill:active{background:var(--wheat-dark);}
+  .c-call .listen-pill:active{background:var(--brick);}
+
+  /* ---------- Floating mic FAB ---------- */
+  .fab{
+    position:fixed; right:18px; bottom:92px; z-index:60;
+    width:66px;height:66px;border-radius:50%;
+    background:linear-gradient(150deg,var(--brick),var(--brick-dark));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px rgba(151,63,29,0.45);
+  }
+  .fab svg{width:28px;height:28px;color:#fff;}
+  .fab .pulse-ring{border-color:var(--brick);}
+  .fab:active{transform:scale(0.92);}
+
+  /* ---------- Bottom nav ---------- */
+  .bottomnav{
+    position:sticky;bottom:0;z-index:40;
+    background:#fff;
+    border-top:1px solid #EAE2CF;
+    display:flex;justify-content:space-around;align-items:center;
+    padding:10px 4px calc(10px + env(safe-area-inset-bottom));
+    box-shadow:0 -6px 18px rgba(0,0,0,0.06);
+  }
+  .navbtn{
+    background:none;display:flex;flex-direction:column;align-items:center;gap:4px;
+    color:var(--ink-soft);font-size:12px;font-weight:700;padding:6px 10px;border-radius:14px;
+    min-width:60px;
+  }
+  .navbtn svg{width:26px;height:26px;}
+  .navbtn.active{color:var(--field-green);}
+
+  /* ---------- Modal ---------- */
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(20,28,18,0.58);
+    display:none;align-items:flex-end;justify-content:center;z-index:100;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:var(--cream);width:100%;max-width:480px;
+    border-radius:28px 28px 0 0;
+    padding:24px 20px calc(24px + env(safe-area-inset-bottom));
+    max-height:88vh;overflow-y:auto;
+    animation:slideup .28s ease;
+  }
+  @keyframes slideup{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  .modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .modal-head h2{margin:0;font-size:23px;color:var(--field-green-dark);}
+  .modal-close{
+    width:40px;height:40px;border-radius:50%;background:var(--cream-dim);
+    display:flex;align-items:center;justify-content:center;color:var(--ink-soft);flex-shrink:0;
+  }
+  .modal-close svg{width:18px;height:18px;}
+  .mock-box{
+    background:#fff;border-radius:var(--radius-md);padding:18px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);margin-bottom:14px;
+  }
+  .btn-primary{
+    width:100%;background:var(--field-green);color:#fff;font-weight:800;
+    padding:17px;border-radius:18px;font-size:17px;display:flex;align-items:center;
+    justify-content:center;gap:10px;margin-top:8px;min-height:58px;
+  }
+  .btn-primary:active{transform:scale(0.97);}
+  .btn-primary svg{width:20px;height:20px;}
+  .btn-secondary{
+    width:100%;background:var(--cream-dim);color:var(--ink);font-weight:800;
+    padding:17px;border-radius:18px;font-size:17px;margin-top:12px;min-height:58px;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .btn-secondary:active{transform:scale(0.97);}
+  .weather-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #F1E9D8;}
+  .weather-row:last-child{border-bottom:none;}
+  .weather-row .day{font-weight:800;font-size:15px;width:76px;}
+  .weather-row .cond{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft);flex:1;}
+  .weather-row .cond svg{width:30px;height:30px;color:var(--sky);flex-shrink:0;}
+  .weather-row .temp{font-weight:800;font-size:19px;color:var(--field-green-dark);}
+  .pest-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #F1E9D8;}
+  .pest-item:last-child{border-bottom:none;}
+  .pest-num{
+    width:30px;height:30px;border-radius:50%;background:var(--field-green);color:#fff;
+    font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;
+  }
+  .pest-text{font-size:15px;line-height:1.45;}
+  .call-avatar{
+    width:100px;height:100px;border-radius:50%;background:linear-gradient(150deg,var(--field-green-light),var(--field-green-dark));
+    display:flex;align-items:center;justify-content:center;margin:6px auto 14px;
+  }
+  .call-avatar svg{width:48px;height:48px;color:#fff;}
+  .call-status{text-align:center;font-weight:800;color:var(--field-green-dark);font-size:15px;margin-bottom:4px;}
+  .call-timer{
+    text-align:center;font-weight:800;color:var(--brick);font-size:22px;
+    letter-spacing:1px;margin-bottom:10px;font-variant-numeric:tabular-nums;
+  }
+  .call-status.connecting{color:var(--wheat-dark);}
+  .btn-end-call{
+    width:100%;background:var(--brick);color:#fff;font-weight:800;
+    padding:17px;border-radius:18px;font-size:17px;display:flex;align-items:center;
+    justify-content:center;gap:10px;margin-top:8px;min-height:58px;
+  }
+  .btn-end-call:active{transform:scale(0.97);}
+  .btn-end-call svg{width:20px;height:20px;}
+  .caption-box{
+    background:var(--field-green-dark);color:#fff;border-radius:18px;padding:16px 18px;
+    font-size:15.5px;line-height:1.55;min-height:60px;margin:12px 0;
+  }
+  .upload-box{
+    border:3px dashed #C9D8C6;border-radius:18px;padding:30px 14px;text-align:center;color:var(--ink-soft);
+  }
+  .upload-box svg{width:44px;height:44px;color:var(--field-green);margin-bottom:10px;}
+  .upload-box .up-text{font-size:15.5px;font-weight:700;color:var(--ink);}
+  .hint-text{font-size:13.5px;color:var(--ink-soft);text-align:center;margin-top:8px;}
+  footer{text-align:center;padding:18px 16px 14px;font-size:12px;color:var(--ink-soft);}
+
+  /* voice menu modal */
+  .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px;}
+  .vm-item{
+    background:#fff;border-radius:20px;padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:8px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.07);min-height:120px;justify-content:center;
+  }
+  .vm-item:active{transform:scale(0.95);}
+  .vm-item svg{width:38px;height:38px;}
+  .vm-item.vm-disease{color:var(--field-green);}
+  .vm-item.vm-weather{color:var(--sky);}
+  .vm-item.vm-pest{color:var(--wheat-dark);}
+  .vm-item.vm-call{color:var(--brick);}
+  .vm-item span{font-size:14px;font-weight:800;color:var(--ink);}
+</style>
+</head>
+<body>
+
+<!-- ================= SPLASH: voice-first entry, one tap starts everything ================= -->
+<div class="splash" id="splash" onclick="handleSplashTap(event)">
+  <div class="splash-brand">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z"/></svg>
+    <span>कृषि साथी</span>
+  </div>
+  <div class="splash-sub">Krishi Sathi</div>
+
+  <div class="splash-orb-wrap">
+    <div class="splash-ring"></div>
+    <div class="splash-ring d2"></div>
+    <div class="splash-ring d3"></div>
+    <div class="splash-orb">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M16.5 12a4.5 4.5 0 00-2-3.7v7.4a4.5 4.5 0 002-3.7z"/></svg>
+    </div>
+  </div>
+
+  <div class="splash-langs">
+    <button class="splash-lang" id="splash-ne" onclick="event.stopPropagation(); pickSplashLang('ne')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      नेपाली
+    </button>
+    <button class="splash-lang" id="splash-mai" onclick="event.stopPropagation(); pickSplashLang('mai')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      मैथिली
+    </button>
+    <button class="splash-lang" id="splash-hi" onclick="event.stopPropagation(); pickSplashLang('hi')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      हिंदी
+    </button>
+    <button class="splash-lang" id="splash-en" onclick="event.stopPropagation(); pickSplashLang('en')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      English
+    </button>
+  </div>
+
+  <div class="splash-hint" id="splash-hint">Tap anywhere to hear how to use this app</div>
+</div>
+
+
+<!-- ================= TOP BAR: LANGUAGE ================= -->
+<div class="topbar" role="tablist" aria-label="Language selector">
+  <button class="lang-btn active" data-lang="ne" onclick="setLang('ne')"><span class="lang-dot"></span>नेपाली</button>
+  <button class="lang-btn" data-lang="mai" onclick="setLang('mai')"><span class="lang-dot"></span>मैथिली</button>
+  <button class="lang-btn" data-lang="hi" onclick="setLang('hi')"><span class="lang-dot"></span>हिंदी</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')"><span class="lang-dot"></span>English</button>
+  <button class="mute-btn" id="mute-btn" onclick="toggleMute()" aria-label="Mute voice guide">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M16.5 12a4.5 4.5 0 00-2-3.7v7.4a4.5 4.5 0 002-3.7z"/></svg>
+  </button>
+  <button class="help-btn" onclick="replayGuide()" aria-label="Help">?</button>
+</div>
+<div class="lang-accent-bar" id="lang-accent-bar"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="brandrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z"/></svg>
+    <h1 class="app-name" id="t-appname">Krishi Sathi</h1>
+  </div>
+  <p class="tagline" id="t-tagline">Your farm, your voice, your language.</p>
+
+  <svg class="hero-illustration" viewBox="0 0 340 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- sun -->
+    <circle cx="52" cy="30" r="20" fill="var(--sun-gold)"/>
+    <g stroke="var(--sun-gold)" stroke-width="3" stroke-linecap="round" opacity="0.85">
+      <line x1="52" y1="2" x2="52" y2="10"/>
+      <line x1="52" y1="50" x2="52" y2="58"/>
+      <line x1="24" y1="30" x2="16" y2="30"/>
+      <line x1="88" y1="30" x2="80" y2="30"/>
+      <line x1="32" y1="10" x2="26" y2="4"/>
+      <line x1="72" y1="10" x2="78" y2="4"/>
+    </g>
+    <!-- rolling field -->
+    <path d="M0 100 Q60 82 130 98 T260 96 T340 100 V128 H0 Z" fill="var(--field-mid)" opacity="0.55"/>
+    <path d="M0 112 Q70 98 150 110 T340 110 V128 H0 Z" fill="var(--wheat)" opacity="0.35"/>
+    <!-- healthy crop rows -->
+    <g stroke="var(--field-green-light)" stroke-width="3" stroke-linecap="round" opacity="0.9">
+      <line x1="250" y1="118" x2="250" y2="98"/>
+      <line x1="264" y1="120" x2="264" y2="96"/>
+      <line x1="278" y1="118" x2="278" y2="100"/>
+      <line x1="292" y1="120" x2="292" y2="94"/>
+      <line x1="306" y1="118" x2="306" y2="99"/>
+    </g>
+    <!-- farmer: smiling, arm raised with a healthy leaf -->
+    <g transform="translate(150,40)">
+      <circle cx="0" cy="0" r="16" fill="#F0C79A"/>
+      <path d="M-16 -4a16 16 0 0132 0" fill="var(--field-green-dark)"/>
+      <circle cx="-6" cy="1" r="2" fill="var(--ink)"/>
+      <circle cx="6" cy="1" r="2" fill="var(--ink)"/>
+      <path d="M-7 8q7 6 14 0" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M-14 16 Q0 8 14 16 L18 70 Q0 78 -18 70 Z" fill="var(--brick)"/>
+      <path d="M14 22 L34 6" stroke="#F0C79A" stroke-width="9" stroke-linecap="round"/>
+      <path d="M30 -2 q10 -4 14 6 q-8 4 -16 0z" fill="var(--field-green-light)"/>
+      <path d="M-14 24 L-24 66" stroke="#F0C79A" stroke-width="9" stroke-linecap="round"/>
+    </g>
+    <!-- checkmark badge: problem solved -->
+    <g transform="translate(196,20)">
+      <circle cx="0" cy="0" r="15" fill="#fff"/>
+      <circle cx="0" cy="0" r="15" fill="none" stroke="var(--field-green)" stroke-width="2.5"/>
+      <path d="M-6 0l4 4 8-9" stroke="var(--field-green)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </svg>
+
+  <div class="call-cta-wrap" onclick="openModal('call'); hideTapHint();">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring delay"></div>
+    <button class="call-cta" aria-label="Call Krishi AI">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1C3620" stroke-width="1.8"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z"/><rect x="3" y="6" width="12" height="12" rx="2.5"/></svg>
+    </button>
+    <svg class="tap-hint" id="tap-hint" style="left:62%;top:58%;" viewBox="0 0 24 24" fill="#FBF6EC" stroke="#1C3620" stroke-width="1"><path d="M9 12V5.5a1.5 1.5 0 013 0V11m0-2.5v-1a1.5 1.5 0 013 0V11m0-1a1.5 1.5 0 013 0v3m-9-2v7a4 4 0 004 4h2a4 4 0 004-4v-3.5"/></svg>
+  </div>
+  <div class="call-cta-label" id="t-callcta">Call Krishi AI</div>
+  <div class="call-cta-sub" id="t-callsub">Tap the circle and talk about your crop</div>
+
+  <button class="listen-chip" onclick="speakCurrent('tagline')">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M16.5 12a4.5 4.5 0 00-2-3.7v7.4a4.5 4.5 0 002-3.7z"/></svg>
+    <span id="t-listen">Tap to listen</span>
+  </button>
+</section>
+
+<!-- ================= HOW TO USE (3 steps, order matters — icons carry the meaning) ================= -->
+<div class="howto">
+  <div class="howto-step">
+    <div class="howto-circle" style="background:#FBEEDD;color:var(--wheat-dark);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12V5.5a1.5 1.5 0 013 0V11m0-2.5v-1a1.5 1.5 0 013 0V11m0-1a1.5 1.5 0 013 0v3m-9-2v7a4 4 0 004 4h2a4 4 0 004-4v-3.5"/></svg>
+      <div class="howto-num">1</div>
+    </div>
+    <div class="howto-label" id="t-howto-1">Tap the icon</div>
+  </div>
+  <div class="howto-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+  <div class="howto-step">
+    <div class="howto-circle" style="background:#E4F1F5;color:var(--sky);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M16.5 12a4.5 4.5 0 00-2-3.7v7.4a4.5 4.5 0 002-3.7z"/></svg>
+      <div class="howto-num">2</div>
+    </div>
+    <div class="howto-label" id="t-howto-2">Listen carefully</div>
+  </div>
+  <div class="howto-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+  <div class="howto-step">
+    <div class="howto-circle" style="background:#E9F3E8;color:var(--field-green);">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+      <div class="howto-num">3</div>
+    </div>
+    <div class="howto-label" id="t-howto-3">Get your answer</div>
+  </div>
+</div>
+
+
+<!-- ================= FEATURE GRID (icon-first, minimal text) ================= -->
+<div class="grid">
+
+  <div class="card c-call" onclick="openModal('call')">
+    <div class="icon-badge"><svg viewBox="0 0 24 24"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z" fill="var(--brick)" opacity="0.18"/><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z" fill="none" stroke="var(--brick)" stroke-width="1.8"/><rect x="3" y="6" width="12" height="12" rx="2.5" fill="none" stroke="var(--brick)" stroke-width="1.8"/></svg></div>
+    <h3 class="card-title" id="t-call-title">Video / Audio Call</h3>
+    <button class="listen-pill" onclick="event.stopPropagation(); speakCard('call')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-listen-call">Listen</span>
+    </button>
+  </div>
+
+  <div class="card c-disease" onclick="openModal('disease')">
+    <div class="icon-badge"><svg viewBox="0 0 24 24"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z" fill="none" stroke="var(--field-green)" stroke-width="1.8"/><circle cx="10" cy="12" r="1.5" fill="var(--brick)"/><circle cx="14.5" cy="15.5" r="1.1" fill="var(--brick)"/><circle cx="9" cy="16" r="0.9" fill="var(--brick)"/></svg></div>
+    <h3 class="card-title" id="t-disease-title">Detect Disease</h3>
+    <button class="listen-pill" onclick="event.stopPropagation(); speakCard('disease')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-listen-disease">Listen</span>
+    </button>
+  </div>
+
+  <div class="card c-pest" onclick="openModal('pesticide')">
+    <div class="icon-badge"><svg viewBox="0 0 24 24"><path d="M8 3h4l1 4H7l1-4z" fill="var(--wheat-dark)"/><path d="M7 7h6l2 12a2 2 0 01-2 2H7a2 2 0 01-2-2L7 7z" fill="none" stroke="var(--wheat-dark)" stroke-width="1.8"/><path d="M15 9l3-2M17 12l3-1M16 15l2.5 1" stroke="var(--field-green)" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></div>
+    <h3 class="card-title" id="t-pest-title">Pesticide Advice</h3>
+    <button class="listen-pill" onclick="event.stopPropagation(); speakCard('pest')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-listen-pest">Listen</span>
+    </button>
+  </div>
+
+  <div class="card c-weather" onclick="openModal('weather')">
+    <div class="icon-badge"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3.6" fill="var(--wheat)"/><path d="M4 18a4 4 0 014-4h8a3.5 3.5 0 010 7H8a4 4 0 01-4-3z" fill="none" stroke="var(--sky)" stroke-width="1.9"/></svg></div>
+    <h3 class="card-title" id="t-weather-title">Weather Forecast</h3>
+    <button class="listen-pill" onclick="event.stopPropagation(); speakCard('weather')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-listen-weather">Listen</span>
+    </button>
+  </div>
+
+</div>
+
+<footer id="t-footer">Made for farmers — simple, spoken, in your language</footer>
+
+<!-- Floating mic button: opens a voice-guided menu -->
+<button class="fab" onclick="openVoiceMenu()" aria-label="Voice menu">
+  <div class="pulse-ring"></div>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 003-3V6a3 3 0 10-6 0v5a3 3 0 003 3z"/><path d="M19 11a7 7 0 01-14 0M12 18v3"/></svg>
+</button>
+
+<!-- ================= BOTTOM NAV ================= -->
+<div class="bottomnav">
+  <button class="navbtn active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+    <span id="t-nav-home">Home</span>
+  </button>
+  <button class="navbtn" onclick="openModal('call')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z"/><rect x="3" y="6" width="12" height="12" rx="2.5"/></svg>
+    <span id="t-nav-call">Call AI</span>
+  </button>
+  <button class="navbtn" onclick="openModal('disease')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z"/></svg>
+    <span id="t-nav-disease">Disease</span>
+  </button>
+  <button class="navbtn" onclick="openModal('weather')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="9" r="3.2"/><path d="M4 18a4 4 0 014-4h8a3.5 3.5 0 010 7H8a4 4 0 01-4-3z"/></svg>
+    <span id="t-nav-weather">Weather</span>
+  </button>
+</div>
+
+<!-- ================= MODALS ================= -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this) closeModal()">
+
+  <!-- Voice menu modal -->
+  <div class="modal" id="modal-voicemenu" style="display:none;">
+    <div class="modal-head"><h2 id="t-vm-h">Listen and Choose</h2>
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="vm-grid">
+      <div class="vm-item vm-call" onclick="closeModal(); openModal('call')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z"/><rect x="3" y="6" width="12" height="12" rx="2.5"/></svg>
+        <span id="t-vm-call">Call AI</span>
+      </div>
+      <div class="vm-item vm-disease" onclick="closeModal(); openModal('disease')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z"/></svg>
+        <span id="t-vm-disease">Disease</span>
+      </div>
+      <div class="vm-item vm-pest" onclick="closeModal(); openModal('pesticide')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h6l2 12a2 2 0 01-2 2H7a2 2 0 01-2-2L7 7z"/></svg>
+        <span id="t-vm-pest">Medicine</span>
+      </div>
+      <div class="vm-item vm-weather" onclick="closeModal(); openModal('weather')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="3.2"/><path d="M4 18a4 4 0 014-4h8a3.5 3.5 0 010 7H8a4 4 0 01-4-3z"/></svg>
+        <span id="t-vm-weather">Weather</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease modal -->
+  <div class="modal" id="modal-disease" style="display:none;">
+    <div class="modal-head"><h2 id="t-m-disease-h">Detect Disease</h2>
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="mock-box">
+      <div class="upload-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16l4-5 3 3 5-6 4 8"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg>
+        <div class="up-text" id="t-m-disease-upload">Tap to take a photo of your crop</div>
+      </div>
+      <div class="hint-text" id="t-m-disease-hint">Or just speak — press the mic below</div>
+    </div>
+    <button class="btn-primary" onclick="speakModal('disease')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 003-3V6a3 3 0 10-6 0v5a3 3 0 003 3z"/><path d="M19 11a7 7 0 01-14 0M12 18v3"/></svg>
+      <span id="t-m-disease-btn1">Speak About the Problem</span>
+    </button>
+    <button class="btn-secondary" onclick="openModal('pesticide')">
+      <span id="t-m-disease-btn2">See Medicine Advice →</span>
+    </button>
+  </div>
+
+  <!-- Weather modal -->
+  <div class="modal" id="modal-weather" style="display:none;">
+    <div class="modal-head"><h2 id="t-m-weather-h">Weather Forecast</h2>
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="mock-box">
+      <div class="weather-row">
+        <div class="day" id="t-w-day1">Today</div>
+        <div class="cond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="3"/><path d="M4 18a4 4 0 014-4h8a3.5 3.5 0 010 7H8a4 4 0 01-4-3z"/></svg><span id="t-w-cond1">Partly cloudy, 20% rain</span></div>
+        <div class="temp">32°C</div>
+      </div>
+      <div class="weather-row">
+        <div class="day" id="t-w-day2">Tomorrow</div>
+        <div class="cond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 15a4 4 0 014-4h8a3.5 3.5 0 010 7H8a4 4 0 01-4-3z"/><path d="M9 20l-1 2M13 20l-1 2M17 20l-1 2"/></svg><span id="t-w-cond2">Rain likely, 70% rain</span></div>
+        <div class="temp">30°C</div>
+      </div>
+      <div class="weather-row">
+        <div class="day" id="t-w-day3">Day after</div>
+        <div class="cond"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg><span id="t-w-cond3">Sunny, 10% rain</span></div>
+        <div class="temp">29°C</div>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="speakModal('weather')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-m-weather-btn">Listen to Forecast</span>
+    </button>
+  </div>
+
+  <!-- Pesticide modal -->
+  <div class="modal" id="modal-pesticide" style="display:none;">
+    <div class="modal-head"><h2 id="t-m-pest-h">Pesticide Advice</h2>
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="mock-box">
+      <div class="pest-item"><div class="pest-num">1</div><div class="pest-text" id="t-p-1">Neem oil spray — organic and safe, use every 7 days</div></div>
+      <div class="pest-item"><div class="pest-num">2</div><div class="pest-text" id="t-p-2">Copper oxychloride — for leaf blight, follow the label amount</div></div>
+      <div class="pest-item"><div class="pest-num">3</div><div class="pest-text" id="t-p-3">Do not use extra nitrogen fertilizer while the crop is sick</div></div>
+    </div>
+    <button class="btn-primary" onclick="speakModal('pesticide')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 5L6 9H2v6h4l5 4V5z"/></svg>
+      <span id="t-m-pest-btn">Listen to Advice</span>
+    </button>
+  </div>
+
+  <!-- Call modal -->
+  <div class="modal" id="modal-call" style="display:none;">
+    <div class="modal-head"><h2 id="t-m-call-h">Call Krishi AI</h2>
+      <button class="modal-close" onclick="closeModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="call-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C9 6 4 9 4 14a8 8 0 0016 0c0-5-5-8-8-12z"/></svg></div>
+    <div class="call-status" id="t-m-call-status">Tap below to start</div>
+    <div class="call-timer" id="call-timer" style="display:none;">00:00</div>
+    <div class="caption-box" id="t-m-call-caption">Hello! Show me your crop or tell me the problem, I will help you.</div>
+    <div id="call-start-btns">
+      <button class="btn-primary" onclick="startCall('audio')">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14a3 3 0 003-3V6a3 3 0 10-6 0v5a3 3 0 003 3z"/><path d="M19 11a7 7 0 01-14 0M12 18v3"/></svg>
+        <span id="t-m-call-btn1">Start Audio Call</span>
+      </button>
+      <button class="btn-secondary" onclick="startCall('video')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z"/><rect x="3" y="6" width="12" height="12" rx="2.5"/></svg>
+        <span id="t-m-call-btn2">Start Video Call</span>
+      </button>
+    </div>
+    <button class="btn-end-call" id="call-end-btn" style="display:none;" onclick="endCall()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.55-2.4a1 1 0 011.45.9v9a1 1 0 01-1.45.9L15 16v-6z"/><rect x="3" y="6" width="12" height="12" rx="2.5"/></svg>
+      <span id="t-m-call-btn3">End Call</span>
+    </button>
+  </div>
+
+</div>
+
+<script>
+const T = {
+  en: {
+    appname:"Krishi Sathi", tagline:"Your farm, your voice, your language.",
+    callcta:"Call Krishi AI", callsub:"Tap the circle and talk about your crop",
+    listen:"Tap to listen",
+    disease_title:"Detect Disease", weather_title:"Weather Forecast",
+    pest_title:"Pesticide Advice", call_title:"Video / Audio Call",
+    listen_disease:"Listen", listen_weather:"Listen", listen_pest:"Listen", listen_call:"Listen",
+    disease_desc:"Show your crop, we'll tell you what's wrong",
+    weather_desc:"Know today and tomorrow's weather",
+    pest_desc:"Right medicine for your crop's problem",
+    call_desc:"Speak directly with Krishi AI",
+    footer:"Made for farmers — simple, spoken, in your language",
+    howto_1:"Tap the icon", howto_2:"Listen carefully", howto_3:"Get your answer",
+    nav_home:"Home", nav_disease:"Disease", nav_call:"Call AI", nav_weather:"Weather",
+    vm_h:"Listen and Choose", vm_disease:"Disease", vm_weather:"Weather", vm_pest:"Medicine", vm_call:"Call AI",
+    m_disease_h:"Detect Disease", m_disease_upload:"Tap to take a photo of your crop",
+    m_disease_hint:"Or just speak — press the mic below",
+    m_disease_btn1:"Speak About the Problem", m_disease_btn2:"See Medicine Advice →",
+    m_weather_h:"Weather Forecast",
+    w_day1:"Today", w_cond1:"Partly cloudy, 20% rain",
+    w_day2:"Tomorrow", w_cond2:"Rain likely, 70% rain",
+    w_day3:"Day after", w_cond3:"Sunny, 10% rain",
+    m_weather_btn:"Listen to Forecast",
+    m_pest_h:"Pesticide Advice",
+    p_1:"Neem oil spray — organic and safe, use every 7 days",
+    p_2:"Copper oxychloride — for leaf blight, follow the label amount",
+    p_3:"Do not use extra nitrogen fertilizer while the crop is sick",
+    m_pest_btn:"Listen to Advice",
+    m_call_h:"Call Krishi AI", m_call_status:"Connecting to Krishi AI...",
+    m_call_tap:"Tap below to start", m_call_connected:"Connected",
+    m_call_caption:"Hello! Show me your crop or tell me the problem, I will help you.",
+    m_call_btn1:"Start Audio Call", m_call_btn2:"Start Video Call", m_call_btn3:"End Call",
+    welcome:"Welcome to Krishi Sathi. This app has four things. One, show your sick crop and hear what disease it has. Two, hear today's weather. Three, hear which medicine to spray. Four, tap the big button to call and talk directly. You do not need to read anything, just tap and listen.",
+    speech_lang:"en-US"
+  },
+  ne: {
+    appname:"कृषि साथी", tagline:"तपाईंको खेत, तपाईंको आवाज, तपाईंकै भाषामा।",
+    callcta:"कृषि AI लाई कल गर्नुहोस्", callsub:"गोलो बटन थिचेर आफ्नो बालीको कुरा गर्नुहोस्",
+    listen:"सुन्न थिच्नुहोस्",
+    disease_title:"रोग पहिचान", weather_title:"मौसम पूर्वानुमान",
+    pest_title:"औषधि सिफारिस", call_title:"भिडियो / अडियो कल",
+    listen_disease:"सुन्नुहोस्", listen_weather:"सुन्नुहोस्", listen_pest:"सुन्नुहोस्", listen_call:"सुन्नुहोस्",
+    disease_desc:"आफ्नो बाली देखाउनुहोस्, हामी समस्या बताउँछौं",
+    weather_desc:"आज र भोलिको मौसम थाहा पाउनुहोस्",
+    pest_desc:"तपाईंको बालीको समस्याको लागि सही औषधि",
+    call_desc:"कृषि AI सँग सिधै कुरा गर्नुहोस्",
+    footer:"किसानहरूको लागि बनाइएको — सरल, बोलिने, तपाईंकै भाषामा",
+    howto_1:"चिन्हमा थिच्नुहोस्", howto_2:"राम्रोसँग सुन्नुहोस्", howto_3:"जवाफ पाउनुहोस्",
+    nav_home:"गृह", nav_disease:"रोग", nav_call:"AI कल", nav_weather:"मौसम",
+    vm_h:"सुनेर छान्नुहोस्", vm_disease:"रोग", vm_weather:"मौसम", vm_pest:"औषधि", vm_call:"AI कल",
+    m_disease_h:"रोग पहिचान", m_disease_upload:"आफ्नो बालीको फोटो खिच्न थिच्नुहोस्",
+    m_disease_hint:"वा बोल्नुहोस् मात्र — तलको माइक थिच्नुहोस्",
+    m_disease_btn1:"समस्याको बारेमा बोल्नुहोस्", m_disease_btn2:"औषधि सल्लाह हेर्नुहोस् →",
+    m_weather_h:"मौसम पूर्वानुमान",
+    w_day1:"आज", w_cond1:"आंशिक बादल, २०% वर्षा",
+    w_day2:"भोलि", w_cond2:"वर्षा हुने सम्भावना, ७०%",
+    w_day3:"पर्सि", w_cond3:"घाम लाग्ने, १०% वर्षा",
+    m_weather_btn:"पूर्वानुमान सुन्नुहोस्",
+    m_pest_h:"औषधि सिफारिस",
+    p_1:"निम तेल स्प्रे — जैविक र सुरक्षित, हरेक ७ दिनमा प्रयोग गर्नुहोस्",
+    p_2:"कपर अक्सिक्लोराइड — पात झुल्साको लागि, लेबलको मात्रा पालना गर्नुहोस्",
+    p_3:"बाली बिरामी हुँदा थप नाइट्रोजन मल नराख्नुहोस्",
+    m_pest_btn:"सल्लाह सुन्नुहोस्",
+    m_call_h:"कृषि AI लाई कल गर्नुहोस्", m_call_status:"कृषि AI सँग जोड्दै...",
+    m_call_tap:"सुरु गर्न तल थिच्नुहोस्", m_call_connected:"जोडियो",
+    m_call_caption:"नमस्ते! आफ्नो बाली देखाउनुहोस् वा समस्या भन्नुहोस्, म तपाईंलाई मद्दत गर्छु।",
+    m_call_btn1:"अडियो कल सुरु गर्नुहोस्", m_call_btn2:"भिडियो कल सुरु गर्नुहोस्", m_call_btn3:"कल अन्त्य गर्नुहोस्",
+    welcome:"कृषि साथीमा स्वागत छ। यो एपमा चार कुरा छन्। पहिलो, आफ्नो बिरामी बाली देखाउनुहोस् र कुन रोग हो सुन्नुहोस्। दोस्रो, आजको मौसम सुन्नुहोस्। तेस्रो, कुन औषधि छर्ने सुन्नुहोस्। चौथो, ठूलो बटन थिचेर सिधै कल गरी कुरा गर्नुहोस्। केही पढ्नु पर्दैन, थिच्नुहोस् र सुन्नुहोस्।",
+    speech_lang:"ne-NP"
+  },
+  mai: {
+    appname:"कृषि साथी", tagline:"अहाँक खेत, अहाँक आवाज़, अहाँक अपन भाषा में।",
+    callcta:"कृषि AI के कॉल करू", callsub:"गोल बटन दबाके अपन फसलक बात करू",
+    listen:"सुनबाक लेल दबाऊ",
+    disease_title:"रोग पहचान", weather_title:"मौसम के हाल",
+    pest_title:"दवाई क सलाह", call_title:"वीडियो / ऑडियो कॉल",
+    listen_disease:"सुनू", listen_weather:"सुनू", listen_pest:"सुनू", listen_call:"सुनू",
+    disease_desc:"अपन फसल देखाऊ, हम समस्या बताएब",
+    weather_desc:"आइ आ काल्हिक मौसम जानू",
+    pest_desc:"अहाँक फसलक समस्या लेल सही दवाई",
+    call_desc:"कृषि AI स सीधा बात करू",
+    footer:"किसान लोकनि लेल बनल — सरल, बाजल गेल, अपन भाषा में",
+    howto_1:"चिन्ह पर दबाऊ", howto_2:"ध्यान स सुनू", howto_3:"जवाब पाबू",
+    nav_home:"घर", nav_disease:"रोग", nav_call:"AI कॉल", nav_weather:"मौसम",
+    vm_h:"सुनि क' चुनू", vm_disease:"रोग", vm_weather:"मौसम", vm_pest:"दवाई", vm_call:"AI कॉल",
+    m_disease_h:"रोग पहचान", m_disease_upload:"अपन फसलक फोटो लेबाक लेल दबाऊ",
+    m_disease_hint:"वा खाली बाजू — नीचाँ माइक दबाऊ",
+    m_disease_btn1:"समस्याक बारे में बाजू", m_disease_btn2:"दवाईक सलाह देखू →",
+    m_weather_h:"मौसम के हाल",
+    w_day1:"आइ", w_cond1:"हल्का बादर, २०% बरखा",
+    w_day2:"काल्हि", w_cond2:"बरखा भेटतैक, ७०%",
+    w_day3:"परसू", w_cond3:"धूप, १०% बरखा",
+    m_weather_btn:"हाल सुनू",
+    m_pest_h:"दवाई क सलाह",
+    p_1:"नीम तेल स्प्रे — जैविक आ सुरक्षित, हर ७ दिन में लगाऊ",
+    p_2:"कॉपर ऑक्सीक्लोराइड — पात झुलसाक लेल, लेबल के मात्रा माने",
+    p_3:"फसल बीमार रहला पर बेसी नाइट्रोजन खाद नहि देल जाऊ",
+    m_pest_btn:"सलाह सुनू",
+    m_call_h:"कृषि AI के कॉल करू", m_call_status:"कृषि AI स जुड़ल जा रहल अछि...",
+    m_call_tap:"शुरू करबाक लेल नीचाँ दबाऊ", m_call_connected:"जुड़ि गेल",
+    m_call_caption:"नमस्ते! अपन फसल देखाऊ वा समस्या बताऊ, हम अहाँक मदद करब।",
+    m_call_btn1:"ऑडियो कॉल शुरू करू", m_call_btn2:"वीडियो कॉल शुरू करू", m_call_btn3:"कॉल समाप्त करू",
+    welcome:"कृषि साथी में सुस्वागतम। ई ऐप में चारि टा काज अछि। पहिल, अपन बीमार फसल देखाऊ आ सुनू जे कोन रोग अछि। दोसर, आइक मौसम सुनू। तेसर, कोन दवाई छिड़कब सुनू। चारिम, पैघ बटन दबाके सीधा कॉल कऽ क' बात करू। किछु पढ़बाक जरूरत नहि, बस दबाऊ आ सुनू।",
+    speech_lang:"hi-IN"
+  },
+  hi: {
+    appname:"कृषि साथी", tagline:"आपका खेत, आपकी आवाज़, आपकी अपनी भाषा में।",
+    callcta:"कृषि AI को कॉल करें", callsub:"गोल बटन दबाकर अपनी फसल की बात करें",
+    listen:"सुनने के लिए दबाएँ",
+    disease_title:"रोग पहचानें", weather_title:"मौसम की जानकारी",
+    pest_title:"दवाई की सलाह", call_title:"वीडियो / ऑडियो कॉल",
+    listen_disease:"सुनें", listen_weather:"सुनें", listen_pest:"सुनें", listen_call:"सुनें",
+    disease_desc:"अपनी फसल दिखाइए, हम समस्या बताएँगे",
+    weather_desc:"आज और कल का मौसम जानिए",
+    pest_desc:"आपकी फसल की समस्या के लिए सही दवाई",
+    call_desc:"कृषि AI से सीधे बात करें",
+    footer:"किसानों के लिए बनाया गया — सरल, बोला हुआ, आपकी अपनी भाषा में",
+    howto_1:"चिन्ह पर दबाएँ", howto_2:"ध्यान से सुनें", howto_3:"अपना जवाब पाएँ",
+    nav_home:"होम", nav_disease:"रोग", nav_call:"AI कॉल", nav_weather:"मौसम",
+    vm_h:"सुनें और चुनें", vm_disease:"रोग", vm_weather:"मौसम", vm_pest:"दवाई", vm_call:"AI कॉल",
+    m_disease_h:"रोग पहचानें", m_disease_upload:"अपनी फसल की फोटो लेने के लिए दबाएँ",
+    m_disease_hint:"या सिर्फ़ बोलिए — नीचे माइक दबाएँ",
+    m_disease_btn1:"समस्या के बारे में बोलें", m_disease_btn2:"दवाई की सलाह देखें →",
+    m_weather_h:"मौसम की जानकारी",
+    w_day1:"आज", w_cond1:"हल्के बादल, २०% बारिश",
+    w_day2:"कल", w_cond2:"बारिश की संभावना, ७०%",
+    w_day3:"परसों", w_cond3:"धूप, १०% बारिश",
+    m_weather_btn:"मौसम सुनें",
+    m_pest_h:"दवाई की सलाह",
+    p_1:"नीम तेल स्प्रे — जैविक और सुरक्षित, हर ७ दिन में इस्तेमाल करें",
+    p_2:"कॉपर ऑक्सीक्लोराइड — पत्ती झुलसा रोग के लिए, लेबल की मात्रा का पालन करें",
+    p_3:"फसल बीमार होने पर अतिरिक्त नाइट्रोजन खाद न डालें",
+    m_pest_btn:"सलाह सुनें",
+    m_call_h:"कृषि AI को कॉल करें", m_call_status:"कृषि AI से जुड़ रहे हैं...",
+    m_call_tap:"शुरू करने के लिए नीचे दबाएँ", m_call_connected:"जुड़ गया",
+    m_call_caption:"नमस्ते! अपनी फसल दिखाइए या समस्या बताइए, मैं आपकी मदद करूँगा।",
+    m_call_btn1:"ऑडियो कॉल शुरू करें", m_call_btn2:"वीडियो कॉल शुरू करें", m_call_btn3:"कॉल समाप्त करें",
+    welcome:"कृषि साथी में आपका स्वागत है। इस ऐप में चार काम हो सकते हैं। पहला, अपनी बीमार फसल दिखाइए और सुनिए कौन सा रोग है। दूसरा, आज और कल का मौसम सुनिए। तीसरा, कौन सी दवाई छिड़कनी है सुनिए। चौथा, बड़ा बटन दबाकर सीधे कॉल करके बात कीजिए। कुछ पढ़ने की ज़रूरत नहीं, बस दबाइए और सुनिए।",
+    speech_lang:"hi-IN"
+  }
+};
+
+let currentLang = 'ne';
+let muted = false;
+
+function applyLang(lang){
+  const d = T[lang];
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  const map = {
+    't-appname':'appname','t-tagline':'tagline','t-callcta':'callcta','t-callsub':'callsub','t-listen':'listen',
+    't-disease-title':'disease_title','t-weather-title':'weather_title','t-pest-title':'pest_title','t-call-title':'call_title',
+    't-listen-disease':'listen_disease','t-listen-weather':'listen_weather','t-listen-pest':'listen_pest','t-listen-call':'listen_call',
+    't-footer':'footer',
+    't-howto-1':'howto_1','t-howto-2':'howto_2','t-howto-3':'howto_3',
+    't-nav-home':'nav_home','t-nav-disease':'nav_disease','t-nav-call':'nav_call','t-nav-weather':'nav_weather',
+    't-vm-h':'vm_h','t-vm-disease':'vm_disease','t-vm-weather':'vm_weather','t-vm-pest':'vm_pest','t-vm-call':'vm_call',
+    't-m-disease-h':'m_disease_h','t-m-disease-upload':'m_disease_upload','t-m-disease-hint':'m_disease_hint',
+    't-m-disease-btn1':'m_disease_btn1','t-m-disease-btn2':'m_disease_btn2',
+    't-m-weather-h':'m_weather_h',
+    't-w-day1':'w_day1','t-w-cond1':'w_cond1','t-w-day2':'w_day2','t-w-cond2':'w_cond2','t-w-day3':'w_day3','t-w-cond3':'w_cond3',
+    't-m-weather-btn':'m_weather_btn',
+    't-m-pest-h':'m_pest_h','t-p-1':'p_1','t-p-2':'p_2','t-p-3':'p_3','t-m-pest-btn':'m_pest_btn',
+    't-m-call-h':'m_call_h','t-m-call-caption':'m_call_caption',
+    't-m-call-btn1':'m_call_btn1','t-m-call-btn2':'m_call_btn2','t-m-call-btn3':'m_call_btn3'
+  };
+  Object.keys(map).forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = d[map[id]];
+  });
+  currentLang = lang;
+  const barColors = {ne:'var(--lang-ne)', mai:'var(--lang-mai)', hi:'var(--lang-hi-dark)', en:'var(--lang-en)'};
+  const bar = document.getElementById('lang-accent-bar');
+  if(bar) bar.style.background = barColors[lang];
+  const callStatusEl = document.getElementById('t-m-call-status');
+  if(callStatusEl){
+    if(callState==='connecting') callStatusEl.textContent = d.m_call_status;
+    else if(callState==='connected') callStatusEl.textContent = d.m_call_connected;
+    else callStatusEl.textContent = d.m_call_tap;
+  }
+}
+
+function setLang(lang){
+  applyLang(lang);
+  if(!muted) speak(T[lang].welcome, lang);
+}
+
+function toggleMute(){
+  muted = !muted;
+  document.getElementById('mute-btn').classList.toggle('muted', muted);
+  if(muted) window.speechSynthesis && window.speechSynthesis.cancel();
+}
+
+let cachedVoices = [];
+function loadVoices(){
+  if('speechSynthesis' in window){
+    cachedVoices = window.speechSynthesis.getVoices();
+  }
+}
+if('speechSynthesis' in window){
+  loadVoices();
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+// Many budget phones only ship with a Hindi voice pack installed —
+// find the closest available voice instead of staying silent.
+function pickVoice(wantLang){
+  if(!cachedVoices || cachedVoices.length===0) loadVoices();
+  if(!cachedVoices || cachedVoices.length===0) return null;
+  let v = cachedVoices.find(v=>v.lang===wantLang);
+  if(v) return v;
+  v = cachedVoices.find(v=>v.lang && v.lang.toLowerCase().startsWith(wantLang.split('-')[0].toLowerCase()));
+  if(v) return v;
+  const fallbackOrder = ['hi-IN','hi','ne-NP','en-IN','en-US','en-GB'];
+  for(const code of fallbackOrder){
+    v = cachedVoices.find(v=>v.lang===code || (v.lang && v.lang.toLowerCase().startsWith(code.toLowerCase())));
+    if(v) return v;
+  }
+  return cachedVoices[0] || null;
+}
+
+function speak(text, lang){
+  if(!('speechSynthesis' in window) || muted) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const wantLang = T[lang].speech_lang;
+  const voice = pickVoice(wantLang);
+  if(voice){ u.voice = voice; u.lang = voice.lang; }
+  else { u.lang = wantLang; }
+  u.rate = 0.92;
+  setTimeout(()=>{ try{ window.speechSynthesis.speak(u); }catch(e){} }, 60);
+}
+function speakCurrent(key){ speak(T[currentLang][key], currentLang); }
+function speakCard(cardKey){
+  const d = T[currentLang];
+  const text = d[cardKey+'_title'] + '. ' + d[cardKey+'_desc'];
+  speak(text, currentLang);
+}
+function speakModal(which){
+  const d = T[currentLang];
+  let text = '';
+  if(which==='disease') text = d.m_disease_h + '. ' + d.m_disease_upload + '. ' + d.m_disease_hint;
+  if(which==='weather') text = d.w_day1+' '+d.w_cond1+'. '+d.w_day2+' '+d.w_cond2+'. '+d.w_day3+' '+d.w_cond3;
+  if(which==='pesticide') text = d.p_1+'. '+d.p_2+'. '+d.p_3;
+  if(which==='call') text = d.m_call_caption;
+  speak(text, currentLang);
+}
+
+// ---------- Call flow: one tap connects, no second tap needed ----------
+let callState = 'idle'; // idle | connecting | connected
+let callSeconds = 0;
+let callTimerId = null;
+
+function resetCallUI(){
+  callState = 'idle';
+  callSeconds = 0;
+  if(callTimerId){ clearInterval(callTimerId); callTimerId = null; }
+  const statusEl = document.getElementById('t-m-call-status');
+  const timerEl = document.getElementById('call-timer');
+  const startBtns = document.getElementById('call-start-btns');
+  const endBtn = document.getElementById('call-end-btn');
+  if(statusEl){ statusEl.textContent = T[currentLang].m_call_tap; statusEl.classList.remove('connecting'); }
+  if(timerEl){ timerEl.style.display = 'none'; timerEl.textContent = '00:00'; }
+  if(startBtns) startBtns.style.display = 'block';
+  if(endBtn) endBtn.style.display = 'none';
+}
+
+function startCall(kind){
+  if(callState !== 'idle') return; // one tap is enough — ignore extra taps while (already) connecting/connected
+  callState = 'connecting';
+  const d = T[currentLang];
+  const statusEl = document.getElementById('t-m-call-status');
+  const startBtns = document.getElementById('call-start-btns');
+  if(statusEl){ statusEl.textContent = d.m_call_status; statusEl.classList.add('connecting'); }
+  if(startBtns) startBtns.style.display = 'none';
+  speak(d.m_call_status, currentLang);
+  setTimeout(()=>{
+    if(callState !== 'connecting') return; // modal was closed / call was ended meanwhile
+    callState = 'connected';
+    callSeconds = 0;
+    const d2 = T[currentLang];
+    if(statusEl){ statusEl.textContent = d2.m_call_connected; statusEl.classList.remove('connecting'); }
+    const timerEl = document.getElementById('call-timer');
+    if(timerEl){ timerEl.style.display = 'block'; timerEl.textContent = '00:00'; }
+    const endBtn = document.getElementById('call-end-btn');
+    if(endBtn) endBtn.style.display = 'flex';
+    speak(d2.m_call_caption, currentLang);
+    callTimerId = setInterval(()=>{
+      callSeconds++;
+      const m = String(Math.floor(callSeconds/60)).padStart(2,'0');
+      const s = String(callSeconds%60).padStart(2,'0');
+      const t = document.getElementById('call-timer');
+      if(t) t.textContent = m+':'+s;
+    }, 1000);
+  }, 1400);
+}
+
+function endCall(){
+  resetCallUI();
+  window.speechSynthesis && window.speechSynthesis.cancel();
+}
+
+function hideTapHint(){
+  const h = document.getElementById('tap-hint');
+  if(h) h.classList.add('hidden');
+}
+function replayGuide(){
+  const h = document.getElementById('tap-hint');
+  if(h) h.classList.remove('hidden');
+  speak(T[currentLang].welcome, currentLang);
+}
+
+function openModal(which){
+  hideTapHint();
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  document.getElementById('modal-'+which).style.display='block';
+  document.getElementById('modal-overlay').classList.add('open');
+  if(which==='call') resetCallUI();
+  setTimeout(()=>speakModal(which), 350);
+}
+function openVoiceMenu(){
+  hideTapHint();
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  document.getElementById('modal-voicemenu').style.display='block';
+  document.getElementById('modal-overlay').classList.add('open');
+  const d = T[currentLang];
+  setTimeout(()=>speak(d.vm_h+'. '+d.vm_disease+', '+d.vm_weather+', '+d.vm_pest+', '+d.vm_call+'.', currentLang), 350);
+}
+function closeModal(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  resetCallUI();
+}
+
+let introPlaying = false;
+let splashDismissed = false;
+// Full "what + how" guide per language, not just a colour hint.
+// This is what plays automatically on open, and keeps repeating
+// until the person taps their language — so nobody has to read
+// anything to know what this app does or how to use it.
+const introSeq = [
+  {lang:'ne',
+    text:"कृषि साथीमा स्वागत छ, यो किसानहरूको लागि एउटा एप हो। यो रातो बटन नेपालीको लागि हो। यो एपले चार काम गर्न सक्छ। आफ्नो बिरामी बाली देखाउनुहोस् र कुन रोग हो सुन्नुहोस्। आज र भोलिको मौसम सुन्नुहोस्। कुन औषधि छर्ने सुन्नुहोस्। वा ठूलो बटन थिचेर फोन कलजस्तै सिधै कुरा गर्नुहोस्। केही पढ्नु पर्दैन, बस चित्रमा थिच्नुहोस् र सुन्नुहोस्। नेपाली छान्न, अहिले यो रातो बटन थिच्नुहोस्।",
+    btn:'splash-ne'},
+  {lang:'mai',
+    text:"कृषि साथी में सुस्वागतम, ई किसान लोकनि लेल एकटा ऐप अछि। ई हरियर बटन मैथिली लेल अछि। ई ऐप चारि टा काज कऽ सकैत अछि। अपन बीमार फसल देखाऊ आ सुनू जे कोन रोग अछि। आइ आ काल्हिक मौसम सुनू। कोन दवाई छिड़कब सुनू। वा पैघ बटन दबाके फोन कॉलक तरहें सीधा बात करू। किछु पढ़बाक जरूरत नहि, बस चित्र पर दबाऊ आ सुनू। मैथिली चुनबाक लेल, आब ई हरियर बटन दबाऊ।",
+    btn:'splash-mai'},
+  {lang:'hi',
+    text:"कृषि साथी में आपका स्वागत है, यह किसानों के लिए एक ऐप है। यह सफ़ेद बटन हिंदी के लिए है। इस ऐप में चार काम हो सकते हैं। अपनी बीमार फसल दिखाइए और सुनिए कौन सा रोग है। आज और कल का मौसम सुनिए। कौन सी दवाई छिड़कनी है सुनिए। या बड़ा बटन दबाकर फोन कॉल की तरह सीधे बात कीजिए। कुछ पढ़ने की ज़रूरत नहीं, बस तस्वीर पर दबाइए और सुनिए। हिंदी चुनने के लिए, अभी यह सफ़ेद बटन दबाइए।",
+    btn:'splash-hi'},
+  {lang:'en',
+    text:"Welcome to Krishi Sathi, an app for farmers. This gold button is for English. This app can do four things. Show your sick crop and hear what disease it has. Hear today's and tomorrow's weather. Hear which medicine to spray. Or tap the big button to call and talk directly, like a phone call. You do not need to read anything, just tap a picture and listen. To choose English, tap this gold button now.",
+    btn:'splash-en'}
+];
+
+function clearSplashHighlight(){
+  introSeq.forEach(s=>{
+    const el = document.getElementById(s.btn);
+    if(el) el.classList.remove('speaking');
+  });
+}
+
+function playIntroSequence(){
+  if(introPlaying || muted || splashDismissed) return;
+  if(!('speechSynthesis' in window)) return;
+  introPlaying = true;
+  window.speechSynthesis.cancel();
+  let idx = 0;
+  function next(){
+    if(splashDismissed){ introPlaying = false; clearSplashHighlight(); return; }
+    clearSplashHighlight();
+    if(idx >= introSeq.length){
+      // Nobody has picked a language yet — loop the guide again
+      // after a short pause, so waiting never means silence.
+      introPlaying = false;
+      setTimeout(()=>{ if(!splashDismissed) playIntroSequence(); }, 1600);
+      return;
+    }
+    const item = introSeq[idx];
+    const el = document.getElementById(item.btn);
+    if(el) el.classList.add('speaking');
+    const voice = pickVoice(T[item.lang].speech_lang);
+    const u = new SpeechSynthesisUtterance(item.text);
+    if(voice){ u.voice = voice; u.lang = voice.lang; } else { u.lang = T[item.lang].speech_lang; }
+    u.rate = 0.92;
+    u.onend = ()=>{ idx++; next(); };
+    u.onerror = ()=>{ idx++; next(); };
+    window.speechSynthesis.speak(u);
+  }
+  next();
+}
+
+function handleSplashTap(e){
+  // A tap anywhere on the splash (not just a language button) starts
+  // or resumes the spoken guide — this is the one gesture phones need
+  // before audio is allowed to play.
+  playIntroSequence();
+}
+
+function pickSplashLang(lang){
+  splashDismissed = true;
+  introPlaying = false;
+  clearSplashHighlight();
+  if('speechSynthesis' in window) window.speechSynthesis.cancel();
+  document.getElementById('splash').classList.add('hide');
+  setLang(lang);
+}
+
+// Best-effort: some browsers allow speech synthesis to start without a tap.
+// If blocked, the splash screen (with its own tap-anywhere handler) is the
+// fallback — either way, the guide plays before any reading is required.
+window.addEventListener('load', ()=>{
+  setTimeout(()=>{ try{ playIntroSequence(); }catch(e){} }, 700);
+});
+
+applyLang('ne');
+</script>
+</body>
+</html>
